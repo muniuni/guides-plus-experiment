@@ -1,32 +1,41 @@
 <h1>Emotional Evaluation</h1>
-<script>var urls = [];</script>
 
 <%= form_with model: Score.new, method: :post do |f| %>
-  <div data-controller="projects-eval" data-projects-eval-images-value="<%= @images.to_json(only: [:id, :url]) %>" data-projects-eval-x-axis-value="<%= @project.x_axis %>" data-projects-eval-y-axis-value="<%= @project.y_axis %>">
+  <div data-controller="projects-eval"
+       data-projects-eval-images-value="<%= @images.to_json(only: [:id, :url]) %>"
+       data-projects-eval-x-axis-value="<%= @project.x_axis %>"
+       data-projects-eval-y-axis-value="<%= @project.y_axis %>">
 
     <div id="image-container" class="col-12 col-md-6 col-xl-4 mb-3 text-center"></div>
 
     <div id="slider-container" style="display:none;">
-      <div class="row">
-        <div class="col-4 text-left my-2">- ←</div>
-        <div class="col-4 text-center my-2"><%= @project.x_axis %></div>
-        <div class="col-4 text-end my-2">→ +</div>
-      </div>
-      <div type="text" id="slider-x" class="slider"></div>
-      <%= f.hidden_field :x_values, id: "x_values" %>
+      <div>
+        <div class="row">
+          <div class="col-4 text-left my-2">- ←</div>
+          <div class="col-4 text-center my-2"><%= @project.x_axis %></div>
+          <div class="col-4 text-end my-2">→ +</div>
+        </div>
+        <div id="slider-x" class="slider"></div>
 
-      <div class="row">
-        <div class="col-4 text-left my-2">- ←</div>
-        <div class="col-4 text-center my-2"><%= @project.y_axis %></div>
-        <div class="col-4 text-end my-2">→ +</div>
-      </div>
-      <div type="text" id="slider-y" class="slider"></div>
-      <%= f.hidden_field :y_values, id: "y_values" %>
+        <div class="row">
+          <div class="col-4 text-left my-2">- ←</div>
+          <div class="col-4 text-center my-2"><%= @project.y_axis %></div>
+          <div class="col-4 text-end my-2">→ +</div>
+        </div>
+        <div id="slider-y" class="slider"></div>
 
-      <div class="text-end my-4">
-        <button type="button" id="next-button" class="btn btn-secondary">Next</button>
+        <div class="text-end my-4">
+          <button type="button" id="next-button" class="btn btn-secondary">Next</button>
+        </div>
       </div>
     </div>
+
+    <!-- Hidden Fields for params -->
+    <% 6.times do |i| %>
+      <%= f.hidden_field "i#{i}", id: "i#{i}" %>
+      <%= f.hidden_field "x#{i}", id: "x#{i}" %>
+      <%= f.hidden_field "y#{i}", id: "y#{i}" %>
+    <% end %>
 
     <div class="text-end mb-5" style="display:none;" id="submit-container">
       <%= f.submit 'Submit', class: 'btn btn-primary' %>
@@ -34,6 +43,7 @@
 
   </div>
 <% end %>
+
 
 
 

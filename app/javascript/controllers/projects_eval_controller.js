@@ -5,8 +5,7 @@ export default class extends Controller {
 
   connect() {
     this.currentImageIndex = 0;
-    this.xValues = [];
-    this.yValues = [];
+    this.results = [];  // store { id, x, y }
 
     $("#next-button").on('click', () => this.nextClicked());
     this.showNextImage();
@@ -21,7 +20,6 @@ export default class extends Controller {
     setTimeout(() => {
       imgContainer.empty();
       sliderContainer.fadeIn(() => {
-        // Sliders initialized here, once container is visible
         this.setupSliders();
       });
     }, 5000);
@@ -54,13 +52,18 @@ export default class extends Controller {
   }
 
   nextClicked() {
-    this.xValues.push(this.currentX ?? 0.0);
-    this.yValues.push(this.currentY ?? 0.0);
+    const image = this.imagesValue[this.currentImageIndex];
+
+    this.results.push({
+      id: image.id,
+      x: this.currentX ?? 0.0,
+      y: this.currentY ?? 0.0
+    });
 
     this.currentImageIndex++;
 
     if (this.currentImageIndex < this.imagesValue.length) {
-      this.destroySliders();  // Destroy current sliders before reinitializing
+      this.destroySliders();
       this.showNextImage();
     } else {
       this.finishEvaluation();
@@ -68,7 +71,6 @@ export default class extends Controller {
   }
 
   destroySliders() {
-    // Remove slider DOM elements completely to avoid reinitialization issues
     $("#slider-x").html("");
     $("#slider-y").html("");
     this.currentX = 0.0;
@@ -79,10 +81,15 @@ export default class extends Controller {
     $("#slider-container").hide();
     $("#submit-container").fadeIn();
 
-    $("#x_values").val(JSON.stringify(this.xValues));
-    $("#y_values").val(JSON.stringify(this.yValues));
+    // Assign values to hidden fields exactly like i0, x0, y0...
+    this.results.forEach((result, idx) => {
+      $(`#i${idx}`).val(result.id);
+      $(`#x${idx}`).val(result.x);
+      $(`#y${idx}`).val(result.y);
+    });
   }
 }
+
 
 
 // import { Controller } from "@hotwired/stimulus"
