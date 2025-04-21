@@ -1539,3 +1539,178 @@ Processing by ProjectsController#intro as HTML
 Completed 200 OK in 21ms (Views: 16.9ms | ActiveRecord: 0.6ms | Allocations: 7250)
 
 
+Started GET "/projects/2/eval" for 127.0.0.1 at 2025-04-21 23:03:59 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#eval as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15:in `eval'
+  [1m[36mImage Load (1.6ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."project_id" = ?[0m  [["project_id", 2]]
+  ↳ app/controllers/projects_controller.rb:16:in `eval'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/eval.html.erb within layouts/application
+  Rendered projects/eval.html.erb within layouts/application (Duration: 20.6ms | Allocations: 6994)
+  Rendered layout layouts/application.html.erb (Duration: 258.1ms | Allocations: 91691)
+Completed 200 OK in 418ms (Views: 262.3ms | ActiveRecord: 4.0ms | Allocations: 124148)
+
+
+Started GET "/" for 127.0.0.1 at 2025-04-21 23:04:01 +0900
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  Rendered projects/index.html.erb within layouts/application (Duration: 26.3ms | Allocations: 9131)
+  Rendered layout layouts/application.html.erb (Duration: 35.1ms | Allocations: 14745)
+Completed 200 OK in 37ms (Views: 34.5ms | ActiveRecord: 1.1ms | Allocations: 15115)
+
+
+Started POST "/scores" for 127.0.0.1 at 2025-04-21 23:04:14 +0900
+Processing by ScoresController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "score"=>{"i0"=>"9", "x0"=>"-0.49", "y0"=>"0.32000000000000006", "i1"=>"6", "x1"=>"-0.43999999999999995", "y1"=>"-0.6", "i2"=>"5", "x2"=>"-0.62", "y2"=>"-0.75", "i3"=>"10", "x3"=>"-0.39", "y3"=>"-0.47", "i4"=>"8", "x4"=>"-0.52", "y4"=>"-0.35", "i5"=>"7", "x5"=>"-0.52", "y5"=>"-0.94"}, "commit"=>"Submit"}
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/scores_controller.rb:5:in `block in create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/scores_controller.rb:8:in `block in create'
+  [1m[36mScore Create (1.3ms)[0m  [1m[32mINSERT INTO "scores" ("value", "x", "image_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["value", -0.49], ["x", 1], ["image_id", 9], ["created_at", "2025-04-21 14:04:14.570516"], ["updated_at", "2025-04-21 14:04:14.570516"]]
+  ↳ app/controllers/scores_controller.rb:8:in `block in create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/scores_controller.rb:8:in `block in create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/scores_controller.rb:9:in `block in create'
+  [1m[36mScore Create (0.6ms)[0m  [1m[32mINSERT INTO "scores" ("value", "x", "image_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["value", 0.32000000000000006], ["x", 0], ["image_id", 9], ["created_at", "2025-04-21 14:04:14.579223"], ["updated_at", "2025-04-21 14:04:14.579223"]]
+  ↳ app/controllers/scores_controller.rb:9:in `block in create'
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/scores_controller.rb:9:in `block in create'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/scores_controller.rb:10:in `block in create'
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/scores_controller.rb:5:in `block in create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/scores_controller.rb:8:in `block in create'
+  [1m[36mScore Create (0.5ms)[0m  [1m[32mINSERT INTO "scores" ("value", "x", "image_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["value", -0.43999999999999995], ["x", 1], ["image_id", 6], ["created_at", "2025-04-21 14:04:14.592262"], ["updated_at", "2025-04-21 14:04:14.592262"]]
+  ↳ app/controllers/scores_controller.rb:8:in `block in create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/scores_controller.rb:8:in `block in create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/scores_controller.rb:9:in `block in create'
+  [1m[36mScore Create (0.4ms)[0m  [1m[32mINSERT INTO "scores" ("value", "x", "image_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["value", -0.6], ["x", 0], ["image_id", 6], ["created_at", "2025-04-21 14:04:14.597475"], ["updated_at", "2025-04-21 14:04:14.597475"]]
+  ↳ app/controllers/scores_controller.rb:9:in `block in create'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/scores_controller.rb:9:in `block in create'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/scores_controller.rb:10:in `block in create'
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/scores_controller.rb:5:in `block in create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/scores_controller.rb:8:in `block in create'
+  [1m[36mScore Create (0.7ms)[0m  [1m[32mINSERT INTO "scores" ("value", "x", "image_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["value", -0.62], ["x", 1], ["image_id", 5], ["created_at", "2025-04-21 14:04:14.608803"], ["updated_at", "2025-04-21 14:04:14.608803"]]
+  ↳ app/controllers/scores_controller.rb:8:in `block in create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/scores_controller.rb:8:in `block in create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/scores_controller.rb:9:in `block in create'
+  [1m[36mScore Create (0.8ms)[0m  [1m[32mINSERT INTO "scores" ("value", "x", "image_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["value", -0.75], ["x", 0], ["image_id", 5], ["created_at", "2025-04-21 14:04:14.614689"], ["updated_at", "2025-04-21 14:04:14.614689"]]
+  ↳ app/controllers/scores_controller.rb:9:in `block in create'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/scores_controller.rb:9:in `block in create'
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/scores_controller.rb:10:in `block in create'
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/scores_controller.rb:5:in `block in create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/scores_controller.rb:8:in `block in create'
+  [1m[36mScore Create (0.6ms)[0m  [1m[32mINSERT INTO "scores" ("value", "x", "image_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["value", -0.39], ["x", 1], ["image_id", 10], ["created_at", "2025-04-21 14:04:14.633211"], ["updated_at", "2025-04-21 14:04:14.633211"]]
+  ↳ app/controllers/scores_controller.rb:8:in `block in create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/scores_controller.rb:8:in `block in create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/scores_controller.rb:9:in `block in create'
+  [1m[36mScore Create (0.6ms)[0m  [1m[32mINSERT INTO "scores" ("value", "x", "image_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["value", -0.47], ["x", 0], ["image_id", 10], ["created_at", "2025-04-21 14:04:14.642171"], ["updated_at", "2025-04-21 14:04:14.642171"]]
+  ↳ app/controllers/scores_controller.rb:9:in `block in create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/scores_controller.rb:9:in `block in create'
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/scores_controller.rb:10:in `block in create'
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/scores_controller.rb:5:in `block in create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/scores_controller.rb:8:in `block in create'
+  [1m[36mScore Create (0.5ms)[0m  [1m[32mINSERT INTO "scores" ("value", "x", "image_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["value", -0.52], ["x", 1], ["image_id", 8], ["created_at", "2025-04-21 14:04:14.652603"], ["updated_at", "2025-04-21 14:04:14.652603"]]
+  ↳ app/controllers/scores_controller.rb:8:in `block in create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/scores_controller.rb:8:in `block in create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/scores_controller.rb:9:in `block in create'
+  [1m[36mScore Create (0.6ms)[0m  [1m[32mINSERT INTO "scores" ("value", "x", "image_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["value", -0.35], ["x", 0], ["image_id", 8], ["created_at", "2025-04-21 14:04:14.658590"], ["updated_at", "2025-04-21 14:04:14.658590"]]
+  ↳ app/controllers/scores_controller.rb:9:in `block in create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/scores_controller.rb:9:in `block in create'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/scores_controller.rb:10:in `block in create'
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/scores_controller.rb:5:in `block in create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/scores_controller.rb:8:in `block in create'
+  [1m[36mScore Create (0.5ms)[0m  [1m[32mINSERT INTO "scores" ("value", "x", "image_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["value", -0.52], ["x", 1], ["image_id", 7], ["created_at", "2025-04-21 14:04:14.670569"], ["updated_at", "2025-04-21 14:04:14.670569"]]
+  ↳ app/controllers/scores_controller.rb:8:in `block in create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/scores_controller.rb:8:in `block in create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/scores_controller.rb:9:in `block in create'
+  [1m[36mScore Create (2.0ms)[0m  [1m[32mINSERT INTO "scores" ("value", "x", "image_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["value", -0.94], ["x", 0], ["image_id", 7], ["created_at", "2025-04-21 14:04:14.680256"], ["updated_at", "2025-04-21 14:04:14.680256"]]
+  ↳ app/controllers/scores_controller.rb:9:in `block in create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/scores_controller.rb:9:in `block in create'
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/scores_controller.rb:10:in `block in create'
+Redirected to http://localhost:3000/projects/2/result
+Completed 302 Found in 136ms (ActiveRecord: 31.6ms | Allocations: 42264)
+
+
+Started GET "/projects/2/result" for 127.0.0.1 at 2025-04-21 23:04:14 +0900
+Processing by ProjectsController#result as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:20:in `result'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/result.html.erb within layouts/application
+  Rendered projects/result.html.erb within layouts/application (Duration: 12.0ms | Allocations: 5046)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 10380)
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 0.1ms | Allocations: 11291)
+
+
+Started POST "/projects/2/average" for 127.0.0.1 at 2025-04-21 23:04:14 +0900
+Processing by ProjectsController#average as JSON
+  Parameters: {"img"=>["9", "6", "5", "10", "8", "7"], "id"=>"2"}
+  [1m[36mScore Average (0.4ms)[0m  [1m[34mSELECT AVG("scores"."value") FROM "scores" WHERE "scores"."image_id" = ? AND "scores"."x" = ?[0m  [["image_id", 9], ["x", 1]]
+  ↳ app/controllers/projects_controller.rb:28:in `block in average'
+  [1m[36mScore Average (0.3ms)[0m  [1m[34mSELECT AVG("scores"."value") FROM "scores" WHERE "scores"."image_id" = ? AND "scores"."x" = ?[0m  [["image_id", 9], ["x", 0]]
+  ↳ app/controllers/projects_controller.rb:29:in `block in average'
+  [1m[36mScore Average (0.2ms)[0m  [1m[34mSELECT AVG("scores"."value") FROM "scores" WHERE "scores"."image_id" = ? AND "scores"."x" = ?[0m  [["image_id", 6], ["x", 1]]
+  ↳ app/controllers/projects_controller.rb:28:in `block in average'
+  [1m[36mScore Average (0.2ms)[0m  [1m[34mSELECT AVG("scores"."value") FROM "scores" WHERE "scores"."image_id" = ? AND "scores"."x" = ?[0m  [["image_id", 6], ["x", 0]]
+  ↳ app/controllers/projects_controller.rb:29:in `block in average'
+  [1m[36mScore Average (0.4ms)[0m  [1m[34mSELECT AVG("scores"."value") FROM "scores" WHERE "scores"."image_id" = ? AND "scores"."x" = ?[0m  [["image_id", 5], ["x", 1]]
+  ↳ app/controllers/projects_controller.rb:28:in `block in average'
+  [1m[36mScore Average (0.4ms)[0m  [1m[34mSELECT AVG("scores"."value") FROM "scores" WHERE "scores"."image_id" = ? AND "scores"."x" = ?[0m  [["image_id", 5], ["x", 0]]
+  ↳ app/controllers/projects_controller.rb:29:in `block in average'
+  [1m[36mScore Average (0.5ms)[0m  [1m[34mSELECT AVG("scores"."value") FROM "scores" WHERE "scores"."image_id" = ? AND "scores"."x" = ?[0m  [["image_id", 10], ["x", 1]]
+  ↳ app/controllers/projects_controller.rb:28:in `block in average'
+  [1m[36mScore Average (0.2ms)[0m  [1m[34mSELECT AVG("scores"."value") FROM "scores" WHERE "scores"."image_id" = ? AND "scores"."x" = ?[0m  [["image_id", 10], ["x", 0]]
+  ↳ app/controllers/projects_controller.rb:29:in `block in average'
+  [1m[36mScore Average (0.5ms)[0m  [1m[34mSELECT AVG("scores"."value") FROM "scores" WHERE "scores"."image_id" = ? AND "scores"."x" = ?[0m  [["image_id", 8], ["x", 1]]
+  ↳ app/controllers/projects_controller.rb:28:in `block in average'
+  [1m[36mScore Average (0.4ms)[0m  [1m[34mSELECT AVG("scores"."value") FROM "scores" WHERE "scores"."image_id" = ? AND "scores"."x" = ?[0m  [["image_id", 8], ["x", 0]]
+  ↳ app/controllers/projects_controller.rb:29:in `block in average'
+  [1m[36mScore Average (0.3ms)[0m  [1m[34mSELECT AVG("scores"."value") FROM "scores" WHERE "scores"."image_id" = ? AND "scores"."x" = ?[0m  [["image_id", 7], ["x", 1]]
+  ↳ app/controllers/projects_controller.rb:28:in `block in average'
+  [1m[36mScore Average (0.3ms)[0m  [1m[34mSELECT AVG("scores"."value") FROM "scores" WHERE "scores"."image_id" = ? AND "scores"."x" = ?[0m  [["image_id", 7], ["x", 0]]
+  ↳ app/controllers/projects_controller.rb:29:in `block in average'
+Completed 200 OK in 57ms (Views: 0.4ms | ActiveRecord: 4.1ms | Allocations: 7855)
+
+
