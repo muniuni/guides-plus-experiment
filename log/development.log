@@ -1539,3 +1539,1532 @@ Processing by ProjectsController#intro as HTML
 Completed 200 OK in 21ms (Views: 16.9ms | ActiveRecord: 0.6ms | Allocations: 7250)
 
 
+Started GET "/" for 127.0.0.1 at 2025-04-21 21:12:55 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  Rendered projects/index.html.erb within layouts/application (Duration: 37.6ms | Allocations: 18098)
+  Rendered layout layouts/application.html.erb (Duration: 296.5ms | Allocations: 103743)
+Completed 200 OK in 382ms (Views: 299.7ms | ActiveRecord: 1.3ms | Allocations: 120044)
+
+
+Started GET "/projects/2/consent" for 127.0.0.1 at 2025-04-21 21:12:57 +0900
+Processing by ProjectsController#consent as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7:in `consent'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/consent.html.erb within layouts/application
+  Rendered projects/consent.html.erb within layouts/application (Duration: 2.5ms | Allocations: 518)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 6004)
+Completed 200 OK in 14ms (Views: 11.1ms | ActiveRecord: 0.2ms | Allocations: 7522)
+
+
+Started GET "/projects/2/intro" for 127.0.0.1 at 2025-04-21 21:12:58 +0900
+Processing by ProjectsController#intro as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:11:in `intro'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/intro.html.erb within layouts/application
+  Rendered projects/intro.html.erb within layouts/application (Duration: 1.2ms | Allocations: 255)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 5736)
+Completed 200 OK in 20ms (Views: 17.6ms | ActiveRecord: 0.1ms | Allocations: 6602)
+
+
+Started GET "/projects/2/eval" for 127.0.0.1 at 2025-04-21 21:12:59 +0900
+Processing by ProjectsController#eval as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15:in `eval'
+  [1m[36mImage Load (0.5ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."project_id" = ?[0m  [["project_id", 2]]
+  ↳ app/controllers/projects_controller.rb:16:in `eval'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/eval.html.erb within layouts/application
+  Rendered projects/eval.html.erb within layouts/application (Duration: 17.4ms | Allocations: 6314)
+  Rendered layout layouts/application.html.erb (Duration: 26.2ms | Allocations: 11641)
+Completed 200 OK in 55ms (Views: 26.2ms | ActiveRecord: 2.6ms | Allocations: 19157)
+
+
+Started GET "/" for 127.0.0.1 at 2025-04-21 21:13:01 +0900
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  Rendered projects/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 2061)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 7571)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.4ms | Allocations: 7881)
+
+
+Started GET "/projects/1/intro" for 127.0.0.1 at 2025-04-21 21:13:03 +0900
+Processing by ProjectsController#intro as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:11:in `intro'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/intro.html.erb within layouts/application
+  Rendered projects/intro.html.erb within layouts/application (Duration: 0.4ms | Allocations: 86)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 5567)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.1ms | Allocations: 6372)
+
+
+Started GET "/" for 127.0.0.1 at 2025-04-21 21:22:22 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  Rendered projects/index.html.erb within layouts/application (Duration: 32.1ms | Allocations: 18098)
+  Rendered layout layouts/application.html.erb (Duration: 365.8ms | Allocations: 122511)
+Completed 200 OK in 438ms (Views: 367.9ms | ActiveRecord: 2.0ms | Allocations: 138813)
+
+
+Started GET "/" for 127.0.0.1 at 2025-04-21 21:22:25 +0900
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  Rendered projects/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 2060)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 7563)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.3ms | Allocations: 7874)
+
+
+Started GET "/projects/2/consent" for 127.0.0.1 at 2025-04-21 21:22:26 +0900
+Processing by ProjectsController#consent as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7:in `consent'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/consent.html.erb within layouts/application
+  Rendered projects/consent.html.erb within layouts/application (Duration: 2.1ms | Allocations: 518)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 5990)
+Completed 200 OK in 12ms (Views: 9.0ms | ActiveRecord: 0.2ms | Allocations: 7519)
+
+
+Started GET "/projects/2/intro" for 127.0.0.1 at 2025-04-21 21:22:27 +0900
+Processing by ProjectsController#intro as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:11:in `intro'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/intro.html.erb within layouts/application
+  Rendered projects/intro.html.erb within layouts/application (Duration: 1.3ms | Allocations: 255)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 5736)
+Completed 200 OK in 16ms (Views: 11.1ms | ActiveRecord: 0.5ms | Allocations: 6600)
+
+
+Started GET "/projects/2/eval" for 127.0.0.1 at 2025-04-21 21:22:28 +0900
+Processing by ProjectsController#eval as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15:in `eval'
+  [1m[36mImage Load (1.1ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."project_id" = ?[0m  [["project_id", 2]]
+  ↳ app/controllers/projects_controller.rb:16:in `eval'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/eval.html.erb within layouts/application
+  Rendered projects/eval.html.erb within layouts/application (Duration: 13.7ms | Allocations: 5607)
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 10934)
+Completed 200 OK in 38ms (Views: 19.4ms | ActiveRecord: 2.3ms | Allocations: 18450)
+
+
+Started GET "/" for 127.0.0.1 at 2025-04-21 21:23:33 +0900
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  Rendered projects/index.html.erb within layouts/application (Duration: 14.2ms | Allocations: 2332)
+  Rendered layout layouts/application.html.erb (Duration: 37.3ms | Allocations: 8465)
+Completed 200 OK in 51ms (Views: 49.1ms | ActiveRecord: 0.5ms | Allocations: 9584)
+
+
+Started GET "/projects/2/consent" for 127.0.0.1 at 2025-04-21 21:23:34 +0900
+Processing by ProjectsController#consent as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7:in `consent'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/consent.html.erb within layouts/application
+  Rendered projects/consent.html.erb within layouts/application (Duration: 1.3ms | Allocations: 392)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 5973)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.1ms | Allocations: 6827)
+
+
+Started GET "/projects/2/intro" for 127.0.0.1 at 2025-04-21 21:23:35 +0900
+Processing by ProjectsController#intro as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:11:in `intro'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/intro.html.erb within layouts/application
+  Rendered projects/intro.html.erb within layouts/application (Duration: 2.4ms | Allocations: 246)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 5756)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 0.1ms | Allocations: 6607)
+
+
+Started GET "/projects/2/eval" for 127.0.0.1 at 2025-04-21 21:23:35 +0900
+Processing by ProjectsController#eval as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15:in `eval'
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."project_id" = ?[0m  [["project_id", 2]]
+  ↳ app/controllers/projects_controller.rb:16:in `eval'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/eval.html.erb within layouts/application
+  Rendered projects/eval.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1179)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 6504)
+Completed 200 OK in 15ms (Views: 10.4ms | ActiveRecord: 0.3ms | Allocations: 8086)
+
+
+Started GET "/" for 127.0.0.1 at 2025-04-21 21:23:37 +0900
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  Rendered projects/index.html.erb within layouts/application (Duration: 6.9ms | Allocations: 2051)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 7540)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.3ms | Allocations: 7844)
+
+
+Started GET "/" for 127.0.0.1 at 2025-04-21 21:24:33 +0900
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  Rendered projects/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 2051)
+  Rendered layout layouts/application.html.erb (Duration: 166.5ms | Allocations: 36666)
+Completed 200 OK in 168ms (Views: 166.9ms | ActiveRecord: 0.6ms | Allocations: 36970)
+
+
+Started GET "/" for 127.0.0.1 at 2025-04-21 21:24:33 +0900
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  Rendered projects/index.html.erb within layouts/application (Duration: 14.5ms | Allocations: 2051)
+  Rendered layout layouts/application.html.erb (Duration: 31.0ms | Allocations: 7548)
+Completed 200 OK in 33ms (Views: 30.5ms | ActiveRecord: 1.5ms | Allocations: 7850)
+
+
+Started GET "/projects/2/consent" for 127.0.0.1 at 2025-04-21 21:24:33 +0900
+Processing by ProjectsController#consent as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7:in `consent'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/consent.html.erb within layouts/application
+  Rendered projects/consent.html.erb within layouts/application (Duration: 0.3ms | Allocations: 143)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 5716)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.1ms | Allocations: 6512)
+
+
+Started GET "/projects/2/intro" for 127.0.0.1 at 2025-04-21 21:24:34 +0900
+Processing by ProjectsController#intro as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:11:in `intro'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/intro.html.erb within layouts/application
+  Rendered projects/intro.html.erb within layouts/application (Duration: 0.3ms | Allocations: 87)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 5573)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.1ms | Allocations: 6369)
+
+
+Started GET "/projects/2/eval" for 127.0.0.1 at 2025-04-21 21:24:35 +0900
+Processing by ProjectsController#eval as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15:in `eval'
+  [1m[36mImage Load (0.5ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."project_id" = ?[0m  [["project_id", 2]]
+  ↳ app/controllers/projects_controller.rb:16:in `eval'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/eval.html.erb within layouts/application
+  Rendered projects/eval.html.erb within layouts/application (Duration: 1.7ms | Allocations: 845)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 6170)
+Completed 200 OK in 23ms (Views: 14.8ms | ActiveRecord: 0.7ms | Allocations: 7695)
+
+
+Started GET "/projects/2/undefined" for 127.0.0.1 at 2025-04-21 21:24:35 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/projects/2/undefined"):
+  
+Started GET "/" for 127.0.0.1 at 2025-04-21 21:24:36 +0900
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  Rendered projects/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 2052)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 7664)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.5ms | Allocations: 7971)
+
+
+Started POST "/scores" for 127.0.0.1 at 2025-04-21 21:24:48 +0900
+Processing by ScoresController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "score"=>{"image_id"=>"undefined", "x"=>"1", "y"=>"1"}, "commit"=>"Submit"}
+[31mUnpermitted parameters: :image_id, :x, :y. Context: { controller: ScoresController, action: create, request: #<ActionDispatch::Request:0x000000011165d990>, params: {"authenticity_token"=>"[FILTERED]", "score"=>{"image_id"=>"undefined", "x"=>"1", "y"=>"1"}, "commit"=>"Submit", "controller"=>"scores", "action"=>"create"} }[0m
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms | Allocations: 1126)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Image without an ID):
+  
+app/controllers/scores_controller.rb:5:in `block in create'
+app/controllers/scores_controller.rb:4:in `create'
+Started GET "/projects/2/eval" for 127.0.0.1 at 2025-04-21 21:24:48 +0900
+Processing by ProjectsController#eval as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15:in `eval'
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."project_id" = ?[0m  [["project_id", 2]]
+  ↳ app/controllers/projects_controller.rb:16:in `eval'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/eval.html.erb within layouts/application
+  Rendered projects/eval.html.erb within layouts/application (Duration: 1.8ms | Allocations: 846)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 6272)
+Completed 200 OK in 14ms (Views: 10.1ms | ActiveRecord: 0.3ms | Allocations: 7798)
+
+
+Started GET "/projects/2/undefined" for 127.0.0.1 at 2025-04-21 21:24:48 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/projects/2/undefined"):
+  
+Started GET "/" for 127.0.0.1 at 2025-04-21 21:25:02 +0900
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  Rendered projects/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 2051)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 7640)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.3ms | Allocations: 7945)
+
+
+Started POST "/scores" for 127.0.0.1 at 2025-04-21 21:25:05 +0900
+Processing by ScoresController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "score"=>{"image_id"=>"undefined", "x"=>"1", "y"=>"1"}, "commit"=>"Submit"}
+[31mUnpermitted parameters: :image_id, :x, :y. Context: { controller: ScoresController, action: create, request: #<ActionDispatch::Request:0x00000001113b7448>, params: {"authenticity_token"=>"[FILTERED]", "score"=>{"image_id"=>"undefined", "x"=>"1", "y"=>"1"}, "commit"=>"Submit", "controller"=>"scores", "action"=>"create"} }[0m
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms | Allocations: 942)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Image without an ID):
+  
+app/controllers/scores_controller.rb:5:in `block in create'
+app/controllers/scores_controller.rb:4:in `create'
+Started GET "/projects/2/eval" for 127.0.0.1 at 2025-04-21 21:25:05 +0900
+Processing by ProjectsController#eval as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15:in `eval'
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."project_id" = ?[0m  [["project_id", 2]]
+  ↳ app/controllers/projects_controller.rb:16:in `eval'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/eval.html.erb within layouts/application
+  Rendered projects/eval.html.erb within layouts/application (Duration: 1.7ms | Allocations: 848)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 6274)
+Completed 200 OK in 12ms (Views: 7.5ms | ActiveRecord: 0.4ms | Allocations: 7798)
+
+
+Started GET "/projects/2/undefined" for 127.0.0.1 at 2025-04-21 21:25:06 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/projects/2/undefined"):
+  
+Started GET "/" for 127.0.0.1 at 2025-04-21 21:25:07 +0900
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  Rendered projects/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 2051)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 7630)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.2ms | Allocations: 7935)
+
+
+Started GET "/undefined" for 127.0.0.1 at 2025-04-21 21:25:12 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/undefined"):
+  
+Started GET "/projects/2/consent" for 127.0.0.1 at 2025-04-21 21:25:33 +0900
+Processing by ProjectsController#consent as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7:in `consent'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/consent.html.erb within layouts/application
+  Rendered projects/consent.html.erb within layouts/application (Duration: 1.0ms | Allocations: 405)
+  Rendered layout layouts/application.html.erb (Duration: 43.4ms | Allocations: 34660)
+Completed 200 OK in 50ms (Views: 47.2ms | ActiveRecord: 0.1ms | Allocations: 36268)
+
+
+Started GET "/projects/2/consent" for 127.0.0.1 at 2025-04-21 21:25:33 +0900
+Processing by ProjectsController#consent as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7:in `consent'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/consent.html.erb within layouts/application
+  Rendered projects/consent.html.erb within layouts/application (Duration: 0.5ms | Allocations: 143)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 5644)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.2ms | Allocations: 6438)
+
+
+Started GET "/projects/2/intro" for 127.0.0.1 at 2025-04-21 21:25:34 +0900
+Processing by ProjectsController#intro as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:11:in `intro'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/intro.html.erb within layouts/application
+  Rendered projects/intro.html.erb within layouts/application (Duration: 1.0ms | Allocations: 250)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 5742)
+Completed 200 OK in 11ms (Views: 7.5ms | ActiveRecord: 0.2ms | Allocations: 6592)
+
+
+Started GET "/projects/2/eval" for 127.0.0.1 at 2025-04-21 21:25:35 +0900
+Processing by ProjectsController#eval as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15:in `eval'
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."project_id" = ?[0m  [["project_id", 2]]
+  ↳ app/controllers/projects_controller.rb:16:in `eval'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/eval.html.erb within layouts/application
+  Rendered projects/eval.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2282)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 7607)
+Completed 200 OK in 18ms (Views: 11.6ms | ActiveRecord: 0.5ms | Allocations: 9187)
+
+
+Started GET "/" for 127.0.0.1 at 2025-04-21 21:25:36 +0900
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  Rendered projects/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 2308)
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 7803)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.3ms | Allocations: 8162)
+
+
+Started GET "/" for 127.0.0.1 at 2025-04-21 21:31:40 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  Rendered projects/index.html.erb within layouts/application (Duration: 33.2ms | Allocations: 18098)
+  Rendered layout layouts/application.html.erb (Duration: 388.1ms | Allocations: 125489)
+Completed 200 OK in 463ms (Views: 390.4ms | ActiveRecord: 2.2ms | Allocations: 141791)
+
+
+Started GET "/projects/2/consent" for 127.0.0.1 at 2025-04-21 21:31:42 +0900
+Processing by ProjectsController#consent as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7:in `consent'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/consent.html.erb within layouts/application
+  Rendered projects/consent.html.erb within layouts/application (Duration: 1.5ms | Allocations: 518)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 5998)
+Completed 200 OK in 12ms (Views: 8.6ms | ActiveRecord: 0.2ms | Allocations: 7531)
+
+
+Started GET "/projects/2/intro" for 127.0.0.1 at 2025-04-21 21:31:44 +0900
+Processing by ProjectsController#intro as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:11:in `intro'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/intro.html.erb within layouts/application
+  Rendered projects/intro.html.erb within layouts/application (Duration: 1.5ms | Allocations: 255)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 5748)
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.1ms | Allocations: 6612)
+
+
+Started GET "/projects/2/eval" for 127.0.0.1 at 2025-04-21 21:31:44 +0900
+Processing by ProjectsController#eval as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15:in `eval'
+  [1m[36mImage Load (1.8ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."project_id" = ?[0m  [["project_id", 2]]
+  ↳ app/controllers/projects_controller.rb:16:in `eval'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/eval.html.erb within layouts/application
+  Rendered projects/eval.html.erb within layouts/application (Duration: 13.1ms | Allocations: 5980)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 11306)
+Completed 200 OK in 44ms (Views: 20.7ms | ActiveRecord: 3.3ms | Allocations: 18809)
+
+
+Started GET "/projects/2/eval" for 127.0.0.1 at 2025-04-21 21:31:44 +0900
+Processing by ProjectsController#eval as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15:in `eval'
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."project_id" = ?[0m  [["project_id", 2]]
+  ↳ app/controllers/projects_controller.rb:16:in `eval'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/eval.html.erb within layouts/application
+  Rendered projects/eval.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1234)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 6560)
+Completed 200 OK in 15ms (Views: 11.2ms | ActiveRecord: 0.3ms | Allocations: 8101)
+
+
+Started GET "/" for 127.0.0.1 at 2025-04-21 21:32:03 +0900
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  Rendered projects/index.html.erb within layouts/application (Duration: 11.2ms | Allocations: 2060)
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 7647)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.3ms | Allocations: 7956)
+
+
+Started GET "/" for 127.0.0.1 at 2025-04-21 21:35:09 +0900
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  Rendered projects/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 2332)
+  Rendered layout layouts/application.html.erb (Duration: 52.5ms | Allocations: 37571)
+Completed 200 OK in 57ms (Views: 54.6ms | ActiveRecord: 0.3ms | Allocations: 38687)
+
+
+Started GET "/projects/2/consent" for 127.0.0.1 at 2025-04-21 21:35:10 +0900
+Processing by ProjectsController#consent as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7:in `consent'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/consent.html.erb within layouts/application
+  Rendered projects/consent.html.erb within layouts/application (Duration: 1.2ms | Allocations: 389)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 5863)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.1ms | Allocations: 6715)
+
+
+Started GET "/projects/2/intro" for 127.0.0.1 at 2025-04-21 21:35:13 +0900
+Processing by ProjectsController#intro as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:11:in `intro'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/intro.html.erb within layouts/application
+  Rendered projects/intro.html.erb within layouts/application (Duration: 1.5ms | Allocations: 245)
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 5728)
+Completed 200 OK in 21ms (Views: 18.0ms | ActiveRecord: 0.2ms | Allocations: 6579)
+
+
+Started GET "/projects/2/eval" for 127.0.0.1 at 2025-04-21 21:35:14 +0900
+Processing by ProjectsController#eval as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15:in `eval'
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."project_id" = ?[0m  [["project_id", 2]]
+  ↳ app/controllers/projects_controller.rb:16:in `eval'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/eval.html.erb within layouts/application
+  Rendered projects/eval.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1495)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 6820)
+Completed 200 OK in 16ms (Views: 10.5ms | ActiveRecord: 0.4ms | Allocations: 8400)
+
+
+Started GET "/" for 127.0.0.1 at 2025-04-21 21:35:15 +0900
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  Rendered projects/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2051)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 7625)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.3ms | Allocations: 7930)
+
+
+Started GET "/" for 127.0.0.1 at 2025-04-21 21:35:17 +0900
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  Rendered projects/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 2051)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 7560)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.3ms | Allocations: 7864)
+
+
+Started GET "/projects/1/intro" for 127.0.0.1 at 2025-04-21 21:35:18 +0900
+Processing by ProjectsController#intro as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:11:in `intro'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/intro.html.erb within layouts/application
+  Rendered projects/intro.html.erb within layouts/application (Duration: 0.4ms | Allocations: 85)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 5571)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.1ms | Allocations: 6364)
+
+
+Started GET "/" for 127.0.0.1 at 2025-04-21 21:35:20 +0900
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  Rendered projects/index.html.erb within layouts/application (Duration: 9.2ms | Allocations: 2051)
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 7542)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.3ms | Allocations: 7844)
+
+
+Started GET "/" for 127.0.0.1 at 2025-04-21 21:35:29 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  Rendered projects/index.html.erb within layouts/application (Duration: 34.3ms | Allocations: 18098)
+  Rendered layout layouts/application.html.erb (Duration: 325.4ms | Allocations: 127507)
+Completed 200 OK in 404ms (Views: 327.3ms | ActiveRecord: 2.1ms | Allocations: 143809)
+
+
+Started GET "/projects/2/consent" for 127.0.0.1 at 2025-04-21 21:35:32 +0900
+Processing by ProjectsController#consent as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7:in `consent'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/consent.html.erb within layouts/application
+  Rendered projects/consent.html.erb within layouts/application (Duration: 2.0ms | Allocations: 518)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 6010)
+Completed 200 OK in 24ms (Views: 19.9ms | ActiveRecord: 0.3ms | Allocations: 7543)
+
+
+Started GET "/projects/1/intro" for 127.0.0.1 at 2025-04-21 21:35:32 +0900
+Processing by ProjectsController#intro as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:11:in `intro'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/intro.html.erb within layouts/application
+  Rendered projects/intro.html.erb within layouts/application (Duration: 1.3ms | Allocations: 253)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 5745)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.1ms | Allocations: 6595)
+
+
+Started GET "/projects/1/eval" for 127.0.0.1 at 2025-04-21 21:35:33 +0900
+Processing by ProjectsController#eval as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15:in `eval'
+  [1m[36mImage Load (2.0ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."project_id" = ?[0m  [["project_id", 1]]
+  ↳ app/controllers/projects_controller.rb:16:in `eval'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/eval.html.erb within layouts/application
+  Rendered projects/eval.html.erb within layouts/application (Duration: 12.8ms | Allocations: 5565)
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | Allocations: 10892)
+Completed 200 OK in 43ms (Views: 21.5ms | ActiveRecord: 3.6ms | Allocations: 18376)
+
+
+Started GET "/" for 127.0.0.1 at 2025-04-21 21:35:34 +0900
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  Rendered projects/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2054)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 7557)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.3ms | Allocations: 7862)
+
+
+Started GET "/projects/2/consent" for 127.0.0.1 at 2025-04-21 21:35:35 +0900
+Processing by ProjectsController#consent as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7:in `consent'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/consent.html.erb within layouts/application
+  Rendered projects/consent.html.erb within layouts/application (Duration: 0.6ms | Allocations: 144)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 5641)
+Completed 200 OK in 17ms (Views: 14.7ms | ActiveRecord: 0.1ms | Allocations: 6448)
+
+
+Started GET "/projects/2/intro" for 127.0.0.1 at 2025-04-21 21:35:36 +0900
+Processing by ProjectsController#intro as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:11:in `intro'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/intro.html.erb within layouts/application
+  Rendered projects/intro.html.erb within layouts/application (Duration: 0.3ms | Allocations: 87)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 5582)
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 0.2ms | Allocations: 6389)
+
+
+Started GET "/projects/2/eval" for 127.0.0.1 at 2025-04-21 21:35:37 +0900
+Processing by ProjectsController#eval as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15:in `eval'
+  [1m[36mImage Load (0.7ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."project_id" = ?[0m  [["project_id", 2]]
+  ↳ app/controllers/projects_controller.rb:16:in `eval'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/eval.html.erb within layouts/application
+  Rendered projects/eval.html.erb within layouts/application (Duration: 4.0ms | Allocations: 811)
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 6139)
+Completed 200 OK in 23ms (Views: 17.5ms | ActiveRecord: 0.9ms | Allocations: 7666)
+
+
+Started GET "/" for 127.0.0.1 at 2025-04-21 21:35:39 +0900
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  Rendered projects/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 2051)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 7551)
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 0.3ms | Allocations: 7855)
+
+
+Started GET "/" for 127.0.0.1 at 2025-04-21 21:37:48 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  Rendered projects/index.html.erb within layouts/application (Duration: 34.7ms | Allocations: 18098)
+  Rendered layout layouts/application.html.erb (Duration: 347.8ms | Allocations: 128707)
+Completed 200 OK in 422ms (Views: 348.9ms | ActiveRecord: 2.4ms | Allocations: 145009)
+
+
+Started GET "/projects/2/consent" for 127.0.0.1 at 2025-04-21 21:37:50 +0900
+Processing by ProjectsController#consent as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7:in `consent'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/consent.html.erb within layouts/application
+  Rendered projects/consent.html.erb within layouts/application (Duration: 2.2ms | Allocations: 518)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 5994)
+Completed 200 OK in 17ms (Views: 10.8ms | ActiveRecord: 0.3ms | Allocations: 7512)
+
+
+Started GET "/projects/2/intro" for 127.0.0.1 at 2025-04-21 21:37:51 +0900
+Processing by ProjectsController#intro as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:11:in `intro'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/intro.html.erb within layouts/application
+  Rendered projects/intro.html.erb within layouts/application (Duration: 2.2ms | Allocations: 255)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 5736)
+Completed 200 OK in 16ms (Views: 12.7ms | ActiveRecord: 0.2ms | Allocations: 6602)
+
+
+Started GET "/projects/2/eval" for 127.0.0.1 at 2025-04-21 21:37:51 +0900
+Processing by ProjectsController#eval as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15:in `eval'
+  [1m[36mImage Load (0.8ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."project_id" = ?[0m  [["project_id", 2]]
+  ↳ app/controllers/projects_controller.rb:16:in `eval'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/eval.html.erb within layouts/application
+  Rendered projects/eval.html.erb within layouts/application (Duration: 16.2ms | Allocations: 5596)
+  Rendered layout layouts/application.html.erb (Duration: 23.9ms | Allocations: 10923)
+Completed 200 OK in 49ms (Views: 24.6ms | ActiveRecord: 2.9ms | Allocations: 18439)
+
+
+Started GET "/" for 127.0.0.1 at 2025-04-21 22:28:56 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  Rendered projects/index.html.erb within layouts/application (Duration: 34.8ms | Allocations: 18097)
+  Rendered layout layouts/application.html.erb (Duration: 453.6ms | Allocations: 128720)
+Completed 200 OK in 555ms (Views: 456.1ms | ActiveRecord: 2.2ms | Allocations: 145156)
+
+
+Started GET "/" for 127.0.0.1 at 2025-04-21 22:28:57 +0900
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  Rendered projects/index.html.erb within layouts/application (Duration: 9.8ms | Allocations: 2056)
+  Rendered layout layouts/application.html.erb (Duration: 27.0ms | Allocations: 7555)
+Completed 200 OK in 29ms (Views: 26.9ms | ActiveRecord: 1.0ms | Allocations: 7858)
+
+
+Started GET "/projects/2/consent" for 127.0.0.1 at 2025-04-21 22:28:57 +0900
+Processing by ProjectsController#consent as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7:in `consent'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/consent.html.erb within layouts/application
+  Rendered projects/consent.html.erb within layouts/application (Duration: 2.9ms | Allocations: 518)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 6005)
+Completed 200 OK in 20ms (Views: 16.4ms | ActiveRecord: 0.2ms | Allocations: 7574)
+
+
+Started GET "/projects/2/intro" for 127.0.0.1 at 2025-04-21 22:28:58 +0900
+Processing by ProjectsController#intro as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:11:in `intro'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/intro.html.erb within layouts/application
+  Rendered projects/intro.html.erb within layouts/application (Duration: 2.3ms | Allocations: 255)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 5736)
+Completed 200 OK in 21ms (Views: 14.9ms | ActiveRecord: 0.2ms | Allocations: 6600)
+
+
+Started GET "/projects/2/eval" for 127.0.0.1 at 2025-04-21 22:28:59 +0900
+Processing by ProjectsController#eval as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15:in `eval'
+  [1m[36mImage Load (1.8ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."project_id" = ?[0m  [["project_id", 2]]
+  ↳ app/controllers/projects_controller.rb:16:in `eval'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/eval.html.erb within layouts/application
+  Rendered projects/eval.html.erb within layouts/application (Duration: 30.9ms | Allocations: 6939)
+  Rendered layout layouts/application.html.erb (Duration: 38.8ms | Allocations: 12265)
+Completed 200 OK in 70ms (Views: 39.5ms | ActiveRecord: 3.8ms | Allocations: 19768)
+
+
+Started GET "/" for 127.0.0.1 at 2025-04-21 22:29:42 +0900
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  Rendered projects/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 2058)
+  Rendered layout layouts/application.html.erb (Duration: 67.0ms | Allocations: 36755)
+Completed 200 OK in 68ms (Views: 67.4ms | ActiveRecord: 0.3ms | Allocations: 37063)
+
+
+Started GET "/" for 127.0.0.1 at 2025-04-21 22:29:42 +0900
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  Rendered projects/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 2055)
+  Rendered layout layouts/application.html.erb (Duration: 34.1ms | Allocations: 7555)
+Completed 200 OK in 36ms (Views: 34.3ms | ActiveRecord: 0.5ms | Allocations: 7857)
+
+
+Started GET "/projects/2/consent" for 127.0.0.1 at 2025-04-21 22:29:43 +0900
+Processing by ProjectsController#consent as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7:in `consent'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/consent.html.erb within layouts/application
+  Rendered projects/consent.html.erb within layouts/application (Duration: 0.6ms | Allocations: 144)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 5654)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 0.1ms | Allocations: 6449)
+
+
+Started GET "/projects/2/intro" for 127.0.0.1 at 2025-04-21 22:29:46 +0900
+Processing by ProjectsController#intro as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:11:in `intro'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/intro.html.erb within layouts/application
+  Rendered projects/intro.html.erb within layouts/application (Duration: 0.3ms | Allocations: 87)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 5577)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.1ms | Allocations: 6383)
+
+
+Started GET "/projects/2/eval" for 127.0.0.1 at 2025-04-21 22:29:46 +0900
+Processing by ProjectsController#eval as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15:in `eval'
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."project_id" = ?[0m  [["project_id", 2]]
+  ↳ app/controllers/projects_controller.rb:16:in `eval'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/eval.html.erb within layouts/application
+  Rendered projects/eval.html.erb within layouts/application (Duration: 3.6ms | Allocations: 765)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 6090)
+Completed 200 OK in 23ms (Views: 16.9ms | ActiveRecord: 0.5ms | Allocations: 7617)
+
+
+Started GET "/" for 127.0.0.1 at 2025-04-21 22:30:15 +0900
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  Rendered projects/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2055)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 7650)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.2ms | Allocations: 7955)
+
+
+Started GET "/" for 127.0.0.1 at 2025-04-21 22:34:55 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  Rendered projects/index.html.erb within layouts/application (Duration: 37.6ms | Allocations: 18421)
+Started GET "/projects/2/consent" for 127.0.0.1 at 2025-04-21 22:34:55 +0900
+Processing by ProjectsController#consent as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7:in `consent'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/consent.html.erb within layouts/application
+  Rendered projects/consent.html.erb within layouts/application (Duration: 2.2ms | Allocations: 562)
+  Rendered layout layouts/application.html.erb (Duration: 630.7ms | Allocations: 213325)
+Completed 200 OK in 721ms (Views: 634.8ms | ActiveRecord: 2.8ms | Allocations: 230072)
+
+
+  Rendered layout layouts/application.html.erb (Duration: 581.4ms | Allocations: 191914)
+Completed 200 OK in 590ms (Views: 582.7ms | ActiveRecord: 0.6ms | Allocations: 193690)
+
+
+Started GET "/projects/2/consent" for 127.0.0.1 at 2025-04-21 22:34:56 +0900
+Processing by ProjectsController#consent as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7:in `consent'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/consent.html.erb within layouts/application
+  Rendered projects/consent.html.erb within layouts/application (Duration: 1.2ms | Allocations: 143)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 5641)
+Completed 200 OK in 31ms (Views: 22.4ms | ActiveRecord: 0.5ms | Allocations: 6449)
+
+
+Started GET "/projects/2/intro" for 127.0.0.1 at 2025-04-21 22:34:57 +0900
+Processing by ProjectsController#intro as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:11:in `intro'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/intro.html.erb within layouts/application
+  Rendered projects/intro.html.erb within layouts/application (Duration: 2.1ms | Allocations: 260)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 5747)
+Completed 200 OK in 20ms (Views: 17.1ms | ActiveRecord: 0.2ms | Allocations: 6611)
+
+
+Started GET "/projects/2/eval" for 127.0.0.1 at 2025-04-21 22:34:58 +0900
+Processing by ProjectsController#eval as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15:in `eval'
+  [1m[36mImage Load (1.9ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."project_id" = ?[0m  [["project_id", 2]]
+  ↳ app/controllers/projects_controller.rb:16:in `eval'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/eval.html.erb within layouts/application
+  Rendered projects/eval.html.erb within layouts/application (Duration: 18.1ms | Allocations: 6716)
+  Rendered layout layouts/application.html.erb (Duration: 30.7ms | Allocations: 12044)
+Completed 200 OK in 62ms (Views: 31.5ms | ActiveRecord: 3.1ms | Allocations: 19561)
+
+
+Started GET "/" for 127.0.0.1 at 2025-04-21 22:35:48 +0900
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  Rendered projects/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 2142)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 7642)
+Completed 200 OK in 18ms (Views: 15.4ms | ActiveRecord: 0.5ms | Allocations: 7947)
+
+
+Started GET "/" for 127.0.0.1 at 2025-04-21 22:39:02 +0900
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  Rendered projects/index.html.erb within layouts/application (Duration: 9.2ms | Allocations: 2329)
+  Rendered layout layouts/application.html.erb (Duration: 34.2ms | Allocations: 8444)
+Completed 200 OK in 40ms (Views: 36.9ms | ActiveRecord: 0.4ms | Allocations: 9562)
+
+
+Started GET "/projects/2/consent" for 127.0.0.1 at 2025-04-21 22:39:02 +0900
+Processing by ProjectsController#consent as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7:in `consent'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/consent.html.erb within layouts/application
+  Rendered projects/consent.html.erb within layouts/application (Duration: 2.1ms | Allocations: 389)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 5884)
+Completed 200 OK in 20ms (Views: 17.1ms | ActiveRecord: 0.1ms | Allocations: 6736)
+
+
+Started GET "/projects/2/consent" for 127.0.0.1 at 2025-04-21 22:39:02 +0900
+Processing by ProjectsController#consent as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7:in `consent'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/consent.html.erb within layouts/application
+  Rendered projects/consent.html.erb within layouts/application (Duration: 0.4ms | Allocations: 143)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 5715)
+Completed 200 OK in 12ms (Views: 8.9ms | ActiveRecord: 0.2ms | Allocations: 6511)
+
+
+Started GET "/projects/2/intro" for 127.0.0.1 at 2025-04-21 22:39:04 +0900
+Processing by ProjectsController#intro as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:11:in `intro'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/intro.html.erb within layouts/application
+  Rendered projects/intro.html.erb within layouts/application (Duration: 1.3ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 5735)
+Completed 200 OK in 19ms (Views: 16.7ms | ActiveRecord: 0.2ms | Allocations: 6585)
+
+
+Started GET "/projects/2/eval" for 127.0.0.1 at 2025-04-21 22:39:04 +0900
+Processing by ProjectsController#eval as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15:in `eval'
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."project_id" = ?[0m  [["project_id", 2]]
+  ↳ app/controllers/projects_controller.rb:16:in `eval'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/eval.html.erb within layouts/application
+  Rendered projects/eval.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1418)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 6746)
+Completed 200 OK in 16ms (Views: 10.5ms | ActiveRecord: 0.4ms | Allocations: 8328)
+
+
+Started GET "/" for 127.0.0.1 at 2025-04-21 22:39:17 +0900
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  Rendered projects/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2051)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 7554)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.3ms | Allocations: 7858)
+
+
+Started GET "/projects/2/consent" for 127.0.0.1 at 2025-04-21 22:41:18 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#consent as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7:in `consent'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/consent.html.erb within layouts/application
+  Rendered projects/consent.html.erb within layouts/application (Duration: 2.8ms | Allocations: 849)
+  Rendered layout layouts/application.html.erb (Duration: 5546.2ms | Allocations: 474642)
+Completed 200 OK in 5785ms (Views: 5550.7ms | ActiveRecord: 9.4ms | Allocations: 499643)
+
+
+Started GET "/projects/2/intro" for 127.0.0.1 at 2025-04-21 22:41:27 +0900
+Processing by ProjectsController#intro as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:11:in `intro'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/intro.html.erb within layouts/application
+  Rendered projects/intro.html.erb within layouts/application (Duration: 1.8ms | Allocations: 262)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 5826)
+Completed 200 OK in 21ms (Views: 17.3ms | ActiveRecord: 0.2ms | Allocations: 6694)
+
+
+Started GET "/projects/2/eval" for 127.0.0.1 at 2025-04-21 22:41:28 +0900
+Processing by ProjectsController#eval as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15:in `eval'
+  [1m[36mImage Load (2.3ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."project_id" = ?[0m  [["project_id", 2]]
+  ↳ app/controllers/projects_controller.rb:16:in `eval'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/eval.html.erb within layouts/application
+  Rendered projects/eval.html.erb within layouts/application (Duration: 19.1ms | Allocations: 6683)
+  Rendered layout layouts/application.html.erb (Duration: 33.2ms | Allocations: 12098)
+Completed 200 OK in 68ms (Views: 33.4ms | ActiveRecord: 3.7ms | Allocations: 20590)
+
+
+Started GET "/" for 127.0.0.1 at 2025-04-21 22:41:37 +0900
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  Rendered projects/index.html.erb within layouts/application (Duration: 17.9ms | Allocations: 9087)
+  Rendered layout layouts/application.html.erb (Duration: 27.6ms | Allocations: 14659)
+Completed 200 OK in 30ms (Views: 26.5ms | ActiveRecord: 1.7ms | Allocations: 15027)
+
+
+Started GET "/" for 127.0.0.1 at 2025-04-21 22:50:37 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  Rendered projects/index.html.erb within layouts/application (Duration: 33.1ms | Allocations: 18098)
+Started GET "/projects/2/consent" for 127.0.0.1 at 2025-04-21 22:50:42 +0900
+Processing by ProjectsController#consent as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7:in `consent'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/consent.html.erb within layouts/application
+  Rendered projects/consent.html.erb within layouts/application (Duration: 2.2ms | Allocations: 564)
+  Rendered layout layouts/application.html.erb (Duration: 9037.2ms | Allocations: 291392)
+  Rendered layout layouts/application.html.erb (Duration: 4338.8ms | Allocations: 241235)
+Completed 200 OK in 9134ms (Views: 9045.3ms | ActiveRecord: 2.0ms | Allocations: 320787)
+
+
+Completed 200 OK in 4343ms (Views: 4339.7ms | ActiveRecord: 0.5ms | Allocations: 243124)
+
+
+Started GET "/" for 127.0.0.1 at 2025-04-21 22:50:46 +0900
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  Rendered projects/index.html.erb within layouts/application (Duration: 11.7ms | Allocations: 2059)
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | Allocations: 7741)
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 1.9ms | Allocations: 8050)
+
+
+Started GET "/projects/2/consent" for 127.0.0.1 at 2025-04-21 22:50:49 +0900
+Processing by ProjectsController#consent as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7:in `consent'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/consent.html.erb within layouts/application
+  Rendered projects/consent.html.erb within layouts/application (Duration: 0.5ms | Allocations: 143)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 5823)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.2ms | Allocations: 6663)
+
+
+Started GET "/projects/2/intro" for 127.0.0.1 at 2025-04-21 22:50:50 +0900
+Processing by ProjectsController#intro as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:11:in `intro'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/intro.html.erb within layouts/application
+  Rendered projects/intro.html.erb within layouts/application (Duration: 3.2ms | Allocations: 260)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 5931)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.1ms | Allocations: 6783)
+
+
+Started GET "/projects/2/eval" for 127.0.0.1 at 2025-04-21 22:50:51 +0900
+Processing by ProjectsController#eval as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15:in `eval'
+  [1m[36mImage Load (2.2ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."project_id" = ?[0m  [["project_id", 2]]
+  ↳ app/controllers/projects_controller.rb:16:in `eval'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/eval.html.erb within layouts/application
+  Rendered projects/eval.html.erb within layouts/application (Duration: 31.1ms | Allocations: 6703)
+  Rendered layout layouts/application.html.erb (Duration: 46.4ms | Allocations: 12219)
+Completed 200 OK in 98ms (Views: 45.7ms | ActiveRecord: 4.9ms | Allocations: 19739)
+
+
+Started GET "/" for 127.0.0.1 at 2025-04-21 22:51:10 +0900
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  Rendered projects/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2061)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 7769)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.3ms | Allocations: 8079)
+
+
+Started GET "/projects/1/intro" for 127.0.0.1 at 2025-04-21 22:52:32 +0900
+Processing by ProjectsController#intro as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:11:in `intro'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/intro.html.erb within layouts/application
+  Rendered projects/intro.html.erb within layouts/application (Duration: 0.3ms | Allocations: 86)
+  Rendered layout layouts/application.html.erb (Duration: 45.4ms | Allocations: 34717)
+Completed 200 OK in 48ms (Views: 46.1ms | ActiveRecord: 0.2ms | Allocations: 35512)
+
+
+Started GET "/projects/2/consent" for 127.0.0.1 at 2025-04-21 22:52:32 +0900
+Processing by ProjectsController#consent as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7:in `consent'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/consent.html.erb within layouts/application
+  Rendered projects/consent.html.erb within layouts/application (Duration: 0.4ms | Allocations: 143)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 5823)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.1ms | Allocations: 6618)
+
+
+Started GET "/projects/2/consent" for 127.0.0.1 at 2025-04-21 22:52:33 +0900
+Processing by ProjectsController#consent as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7:in `consent'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/consent.html.erb within layouts/application
+  Rendered projects/consent.html.erb within layouts/application (Duration: 0.5ms | Allocations: 143)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 5823)
+Completed 200 OK in 23ms (Views: 16.4ms | ActiveRecord: 0.2ms | Allocations: 6616)
+
+
+Started GET "/projects/2/intro" for 127.0.0.1 at 2025-04-21 22:52:34 +0900
+Processing by ProjectsController#intro as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:11:in `intro'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/intro.html.erb within layouts/application
+  Rendered projects/intro.html.erb within layouts/application (Duration: 0.7ms | Allocations: 87)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 5768)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.1ms | Allocations: 6563)
+
+
+Started GET "/projects/2/eval" for 127.0.0.1 at 2025-04-21 22:52:35 +0900
+Processing by ProjectsController#eval as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15:in `eval'
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."project_id" = ?[0m  [["project_id", 2]]
+  ↳ app/controllers/projects_controller.rb:16:in `eval'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/eval.html.erb within layouts/application
+  Rendered projects/eval.html.erb within layouts/application (Duration: 1.8ms | Allocations: 768)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 6281)
+Completed 200 OK in 18ms (Views: 14.4ms | ActiveRecord: 0.3ms | Allocations: 7808)
+
+
+Started GET "/" for 127.0.0.1 at 2025-04-21 22:52:43 +0900
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  Rendered projects/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2051)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 7721)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.2ms | Allocations: 8025)
+
+
+Started GET "/" for 127.0.0.1 at 2025-04-21 22:52:59 +0900
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  Rendered projects/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 2051)
+  Rendered layout layouts/application.html.erb (Duration: 64.0ms | Allocations: 36671)
+Completed 200 OK in 66ms (Views: 64.4ms | ActiveRecord: 0.4ms | Allocations: 36973)
+
+
+Started GET "/projects/2/consent" for 127.0.0.1 at 2025-04-21 22:53:01 +0900
+Processing by ProjectsController#consent as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7:in `consent'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/consent.html.erb within layouts/application
+  Rendered projects/consent.html.erb within layouts/application (Duration: 0.7ms | Allocations: 143)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 5812)
+Completed 200 OK in 18ms (Views: 13.7ms | ActiveRecord: 0.2ms | Allocations: 6607)
+
+
+Started GET "/projects/2/intro" for 127.0.0.1 at 2025-04-21 22:53:02 +0900
+Processing by ProjectsController#intro as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:11:in `intro'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/intro.html.erb within layouts/application
+  Rendered projects/intro.html.erb within layouts/application (Duration: 0.4ms | Allocations: 87)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 5761)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.1ms | Allocations: 6556)
+
+
+Started GET "/projects/2/eval" for 127.0.0.1 at 2025-04-21 22:53:02 +0900
+Processing by ProjectsController#eval as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15:in `eval'
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."project_id" = ?[0m  [["project_id", 2]]
+  ↳ app/controllers/projects_controller.rb:16:in `eval'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/eval.html.erb within layouts/application
+  Rendered projects/eval.html.erb within layouts/application (Duration: 3.4ms | Allocations: 780)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 6290)
+Completed 200 OK in 28ms (Views: 19.6ms | ActiveRecord: 0.4ms | Allocations: 7815)
+
+
+Started GET "/projects/2/eval" for 127.0.0.1 at 2025-04-21 22:53:02 +0900
+Processing by ProjectsController#eval as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15:in `eval'
+  [1m[36mImage Load (0.5ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."project_id" = ?[0m  [["project_id", 2]]
+  ↳ app/controllers/projects_controller.rb:16:in `eval'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/eval.html.erb within layouts/application
+  Rendered projects/eval.html.erb within layouts/application (Duration: 1.4ms | Allocations: 765)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 6275)
+Completed 200 OK in 14ms (Views: 10.1ms | ActiveRecord: 0.7ms | Allocations: 7800)
+
+
+Started GET "/" for 127.0.0.1 at 2025-04-21 22:53:38 +0900
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  Rendered projects/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 2051)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 7734)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.4ms | Allocations: 8038)
+
+
+Started GET "/" for 127.0.0.1 at 2025-04-21 22:58:26 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/projects/index.html.erb:8
+  Rendered projects/index.html.erb within layouts/application (Duration: 42.4ms | Allocations: 18098)
+  Rendered layout layouts/application.html.erb (Duration: 4166.8ms | Allocations: 167764)
+Completed 200 OK in 4272ms (Views: 4169.7ms | ActiveRecord: 2.4ms | Allocations: 184158)
+
+
+Started GET "/projects/2/consent" for 127.0.0.1 at 2025-04-21 22:58:36 +0900
+Processing by ProjectsController#consent as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7:in `consent'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/consent.html.erb within layouts/application
+  Rendered projects/consent.html.erb within layouts/application (Duration: 1.3ms | Allocations: 518)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 6010)
+Completed 200 OK in 11ms (Views: 7.9ms | ActiveRecord: 0.2ms | Allocations: 7544)
+
+
+Started GET "/projects/2/intro" for 127.0.0.1 at 2025-04-21 22:58:38 +0900
+Processing by ProjectsController#intro as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:11:in `intro'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/intro.html.erb within layouts/application
+  Rendered projects/intro.html.erb within layouts/application (Duration: 2.1ms | Allocations: 255)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 5754)
+Completed 200 OK in 15ms (Views: 12.3ms | ActiveRecord: 0.2ms | Allocations: 6618)
+
+
+Started GET "/projects/2/eval" for 127.0.0.1 at 2025-04-21 22:58:38 +0900
+Processing by ProjectsController#eval as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:15:in `eval'
+  [1m[36mImage Load (1.6ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."project_id" = ?[0m  [["project_id", 2]]
+  ↳ app/controllers/projects_controller.rb:16:in `eval'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/eval.html.erb within layouts/application
+  Rendered projects/eval.html.erb within layouts/application (Duration: 19.4ms | Allocations: 6700)
+  Rendered layout layouts/application.html.erb (Duration: 26.2ms | Allocations: 12028)
+Completed 200 OK in 49ms (Views: 26.2ms | ActiveRecord: 3.6ms | Allocations: 19544)
+
+
+Started POST "/scores" for 127.0.0.1 at 2025-04-21 22:59:38 +0900
+Processing by ScoresController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "score"=>{"x_values"=>"[0.73,-0.35,0.43999999999999995,-0.6499999999999999,0.3900000000000001,-0.24]", "y_values"=>"[-0.43999999999999995,0.51,-0.52,0.8600000000000001,-0.21999999999999997,0.5]"}, "commit"=>"Submit"}
+[31mUnpermitted parameters: :x_values, :y_values. Context: { controller: ScoresController, action: create, request: #<ActionDispatch::Request:0x000000010d402dc0>, params: {"authenticity_token"=>"[FILTERED]", "score"=>{"x_values"=>"[0.73,-0.35,0.43999999999999995,-0.6499999999999999,0.3900000000000001,-0.24]", "y_values"=>"[-0.43999999999999995,0.51,-0.52,0.8600000000000001,-0.21999999999999997,0.5]"}, "commit"=>"Submit", "controller"=>"scores", "action"=>"create"} }[0m
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 3662)
+
+
+  
+ActionView::MissingTemplate (Missing template scores/new, application/new with {:locale=>[:en], :formats=>[:turbo_stream, :html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/Users/rom/devs/ids/guides/app/views"
+  * "/Users/rom/.anyenv/envs/rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/devise-i18n-1.13.0/app/views"
+  * "/Users/rom/.anyenv/envs/rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/devise-4.9.4/app/views"
+  * "/Users/rom/.anyenv/envs/rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/turbo-rails-2.0.12/app/views"
+  * "/Users/rom/.anyenv/envs/rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/actiontext-7.0.8.7/app/views"
+  * "/Users/rom/.anyenv/envs/rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/actionmailbox-7.0.8.7/app/views"
+):
+  
+app/controllers/scores_controller.rb:9:in `create'
