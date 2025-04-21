@@ -5,29 +5,102 @@ export default class extends Controller {
 
   connect() {
     this.currentImageIndex = 0;
-    this.results = [];  // store { id, x, y }
-
+    this.results = [];
     $("#next-button").on('click', () => this.nextClicked());
     this.showNextImage();
+    // this.progressBar = document.getElementById("progress-bar");
+    this.progressTimer = null;
   }
 
   showNextImage() {
     const imgContainer = $("#image-container");
     const sliderContainer = $("#slider-container");
     sliderContainer.hide();
-    imgContainer.html(`<img src="${this.imagesValue[this.currentImageIndex].url}" class="col-12" />`);
+
+    imgContainer.html(`<img src="${this.imagesValue[this.currentImageIndex].url}" class="img-fluid" style="width: 100%; max-width: 600px; height: 400px; object-fit: cover; border-radius: 8px;" />`);
+
+    this.stopProgressBar();
+
+    this.progressBar = document.getElementById("progress-bar");
+    this.progressBar.parentElement.parentElement.style.display = '';
+    this.resetProgressBar();
+    this.startProgressBar();
 
     setTimeout(() => {
+      this.stopProgressBar();
+      this.resetProgressBar();
+      this.progressBar.parentElement.parentElement.style.display = 'none';
+
       imgContainer.empty();
+      this.rebuildSliderHTML();
       sliderContainer.fadeIn(() => {
         this.setupSliders();
       });
     }, 5000);
   }
 
+
+  startProgressBar() {
+    const totalDuration = 5000;
+    const updateInterval = 100;
+    let elapsed = 0;
+
+    if (!this.progressBar) {
+      console.error("Progress bar element not found!");
+      return;
+    }
+
+    this.progressBar.style.transition = "none";
+    this.progressBar.style.width = "100%";
+
+    void this.progressBar.offsetWidth;
+
+    setTimeout(() => {
+      this.progressBar.style.transition = "width 0.1s linear";
+
+      this.progressTimer = setInterval(() => {
+        elapsed += updateInterval;
+        const percent = Math.max(100 - (elapsed / totalDuration) * 100, 0);
+        this.progressBar.style.width = `${percent}%`;
+
+        if (elapsed >= totalDuration) {
+          clearInterval(this.progressTimer);
+          this.progressTimer = null;
+        }
+      }, updateInterval);
+    }, 10);
+  }
+
+
+
+  resetProgressBar() {
+    if (this.progressBar) {
+      this.progressBar.style.width = "100%";
+    }
+  }
+
+  stopProgressBar() {
+    if (this.progressTimer) {
+      clearInterval(this.progressTimer);
+      this.progressTimer = null;
+    }
+  }
+
+
+
+  rebuildSliderHTML() {
+    $("#slider-x").html('<div id="slider-x-inner"></div>');
+    $("#slider-y").html('<div id="slider-y-inner"></div>');
+  }
+
   setupSliders() {
+    if (!document.getElementById('slider-x-inner') || !document.getElementById('slider-y-inner')) {
+      console.error("Slider elements not found in DOM!");
+      return;
+    }
+
     this.sliderX = new rSlider({
-      target: "#slider-x",
+      target: "#slider-x-inner",
       range: false,
       values: { min: -1.0, max: 1.0 },
       step: 0.01,
@@ -39,7 +112,7 @@ export default class extends Controller {
     });
 
     this.sliderY = new rSlider({
-      target: "#slider-y",
+      target: "#slider-y-inner",
       range: false,
       values: { min: -1.0, max: 1.0 },
       step: 0.01,
@@ -49,6 +122,9 @@ export default class extends Controller {
       scale: null,
       onChange: val => { this.currentY = parseFloat(val); }
     });
+
+    this.currentX = 0.0;
+    this.currentY = 0.0;
   }
 
   nextClicked() {
@@ -71,8 +147,8 @@ export default class extends Controller {
   }
 
   destroySliders() {
-    $("#slider-x").html("");
-    $("#slider-y").html("");
+    $("#slider-x").empty();
+    $("#slider-y").empty();
     this.currentX = 0.0;
     this.currentY = 0.0;
   }
@@ -81,7 +157,6 @@ export default class extends Controller {
     $("#slider-container").hide();
     $("#submit-container").fadeIn();
 
-    // Assign values to hidden fields exactly like i0, x0, y0...
     this.results.forEach((result, idx) => {
       $(`#i${idx}`).val(result.id);
       $(`#x${idx}`).val(result.x);
@@ -89,46 +164,3 @@ export default class extends Controller {
     });
   }
 }
-
-
-
-// import { Controller } from "@hotwired/stimulus"
-//
-// // Connects to data-controller="projects-eval"
-// export default class extends Controller {
-//   connect() {
-//     $(function() {
-//       for (let i = 0; i < 6; i++) {
-//         sessionStorage.setItem("x"+i, 0.0);
-//         new rSlider({
-//                target: "#slider-x"+i, range: false,
-//                values: {min: -1.0, max: 1.0}, step:0.01, set: [0.0],
-//                labels: false, tooltip: false, scale: null,
-//                onChange: function(val) {
-//                       $("#val-x"+i).attr("value", val);
-//                       sessionStorage.setItem("x"+i, val);
-//                     } });
-//         sessionStorage.setItem("y"+i, 0.0);
-//         new rSlider({
-//                target: "#slider-y"+i, range: false,
-//                values: {min: -1.0, max: 1.0}, step:0.01, set: [0.0],
-//                labels: false, tooltip: false, scale: null,
-//                onChange: function(val) {
-//                       $("#val-y"+i).attr("value", val);
-//                       sessionStorage.setItem("y"+i, val);
-//                     } });
-//       }
-//
-//       $("#submit").on('click', function() {
-//           urls = [];
-//           for (let i = 0; i < 6; i++) {
-//             urls.push($("#image-"+i).attr("src"));
-//             sessionStorage.setItem("i"+i, $("#img-"+i).attr("value"));
-//           }
-//           sessionStorage.setItem("URLs", JSON.stringify(urls));
-//           sessionStorage.setItem("x_label", $("#x_axis-0").text());
-//           sessionStorage.setItem("y_label", $("#y_axis-0").text());
-//       });
-//     });
-//   }
-// }
