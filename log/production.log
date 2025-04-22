@@ -1,0 +1,77 @@
+W, [2025-04-23T03:34:24.454780 #45564]  WARN -- : You are running SQLite in production, this is generally not recommended. You can disable this warning by setting "config.active_record.sqlite3_production_warning=false".
+I, [2025-04-23T03:34:28.413815 #45564]  INFO -- : [3377f2c6-a59f-4397-b223-472c8fae191f] Started GET "/" for 127.0.0.1 at 2025-04-23 03:34:28 +0900
+I, [2025-04-23T03:34:28.415316 #45564]  INFO -- : [3377f2c6-a59f-4397-b223-472c8fae191f] Processing by ProjectsController#index as HTML
+I, [2025-04-23T03:34:28.440412 #45564]  INFO -- : [3377f2c6-a59f-4397-b223-472c8fae191f]   Rendered projects/index.html.erb within layouts/application (Duration: 20.1ms | Allocations: 1708)
+I, [2025-04-23T03:34:28.440510 #45564]  INFO -- : [3377f2c6-a59f-4397-b223-472c8fae191f]   Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 1762)
+I, [2025-04-23T03:34:28.440734 #45564]  INFO -- : [3377f2c6-a59f-4397-b223-472c8fae191f] Completed 500 Internal Server Error in 25ms (ActiveRecord: 12.0ms | Allocations: 3627)
+F, [2025-04-23T03:34:28.441567 #45564] FATAL -- : [3377f2c6-a59f-4397-b223-472c8fae191f]   
+[3377f2c6-a59f-4397-b223-472c8fae191f] ActionView::Template::Error (SQLite3::SQLException: no such table: projects):
+[3377f2c6-a59f-4397-b223-472c8fae191f]     1: <h1>Project list</h1>
+[3377f2c6-a59f-4397-b223-472c8fae191f]     2: <ul>
+[3377f2c6-a59f-4397-b223-472c8fae191f]     3:   <% @projects&.each { |p| %>
+[3377f2c6-a59f-4397-b223-472c8fae191f]     4:     <li><% if (p.consent == nil || p.consent == "") || (p.consent2 == nil || p.consent == "") %>
+[3377f2c6-a59f-4397-b223-472c8fae191f]     5:           <%= link_to p.name, intro_project_path(p) %>
+[3377f2c6-a59f-4397-b223-472c8fae191f]     6:         <% else %>
+[3377f2c6-a59f-4397-b223-472c8fae191f]   
+[3377f2c6-a59f-4397-b223-472c8fae191f] app/views/projects/index.html.erb:3
+I, [2025-04-23T03:34:33.437278 #45564]  INFO -- : [fd4b5c3d-0612-4b87-b160-8fb068bc4230] Started GET "/" for 127.0.0.1 at 2025-04-23 03:34:33 +0900
+I, [2025-04-23T03:34:33.437940 #45564]  INFO -- : [fd4b5c3d-0612-4b87-b160-8fb068bc4230] Processing by ProjectsController#index as HTML
+I, [2025-04-23T03:34:33.438922 #45564]  INFO -- : [fd4b5c3d-0612-4b87-b160-8fb068bc4230]   Rendered projects/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 222)
+I, [2025-04-23T03:34:33.438977 #45564]  INFO -- : [fd4b5c3d-0612-4b87-b160-8fb068bc4230]   Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 253)
+I, [2025-04-23T03:34:33.439063 #45564]  INFO -- : [fd4b5c3d-0612-4b87-b160-8fb068bc4230] Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.4ms | Allocations: 462)
+F, [2025-04-23T03:34:33.439724 #45564] FATAL -- : [fd4b5c3d-0612-4b87-b160-8fb068bc4230]   
+[fd4b5c3d-0612-4b87-b160-8fb068bc4230] ActionView::Template::Error (SQLite3::SQLException: no such table: projects):
+[fd4b5c3d-0612-4b87-b160-8fb068bc4230]     1: <h1>Project list</h1>
+[fd4b5c3d-0612-4b87-b160-8fb068bc4230]     2: <ul>
+[fd4b5c3d-0612-4b87-b160-8fb068bc4230]     3:   <% @projects&.each { |p| %>
+[fd4b5c3d-0612-4b87-b160-8fb068bc4230]     4:     <li><% if (p.consent == nil || p.consent == "") || (p.consent2 == nil || p.consent == "") %>
+[fd4b5c3d-0612-4b87-b160-8fb068bc4230]     5:           <%= link_to p.name, intro_project_path(p) %>
+[fd4b5c3d-0612-4b87-b160-8fb068bc4230]     6:         <% else %>
+[fd4b5c3d-0612-4b87-b160-8fb068bc4230]   
+[fd4b5c3d-0612-4b87-b160-8fb068bc4230] app/views/projects/index.html.erb:3
+W, [2025-04-23T03:35:24.586998 #45685]  WARN -- : You are running SQLite in production, this is generally not recommended. You can disable this warning by setting "config.active_record.sqlite3_production_warning=false".
+I, [2025-04-23T03:35:26.828943 #45685]  INFO -- : [f19034c7-9806-410a-a2e9-be5629633144] Started GET "/" for 127.0.0.1 at 2025-04-23 03:35:26 +0900
+I, [2025-04-23T03:35:26.830541 #45685]  INFO -- : [f19034c7-9806-410a-a2e9-be5629633144] Processing by ProjectsController#index as HTML
+I, [2025-04-23T03:35:26.838050 #45685]  INFO -- : [f19034c7-9806-410a-a2e9-be5629633144]   Rendered projects/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1708)
+I, [2025-04-23T03:35:26.838169 #45685]  INFO -- : [f19034c7-9806-410a-a2e9-be5629633144]   Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 1762)
+I, [2025-04-23T03:35:26.838320 #45685]  INFO -- : [f19034c7-9806-410a-a2e9-be5629633144] Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.9ms | Allocations: 3626)
+F, [2025-04-23T03:35:26.839128 #45685] FATAL -- : [f19034c7-9806-410a-a2e9-be5629633144]   
+[f19034c7-9806-410a-a2e9-be5629633144] ActionView::Template::Error (SQLite3::SQLException: no such table: projects):
+[f19034c7-9806-410a-a2e9-be5629633144]     1: <h1>Project list</h1>
+[f19034c7-9806-410a-a2e9-be5629633144]     2: <ul>
+[f19034c7-9806-410a-a2e9-be5629633144]     3:   <% @projects&.each { |p| %>
+[f19034c7-9806-410a-a2e9-be5629633144]     4:     <li><% if (p.consent == nil || p.consent == "") || (p.consent2 == nil || p.consent == "") %>
+[f19034c7-9806-410a-a2e9-be5629633144]     5:           <%= link_to p.name, intro_project_path(p) %>
+[f19034c7-9806-410a-a2e9-be5629633144]     6:         <% else %>
+[f19034c7-9806-410a-a2e9-be5629633144]   
+[f19034c7-9806-410a-a2e9-be5629633144] app/views/projects/index.html.erb:3
+I, [2025-04-23T03:35:58.428349 #45685]  INFO -- : [65f60231-2ba4-4f95-a24a-b4c8bce1f419] Started GET "/" for 127.0.0.1 at 2025-04-23 03:35:58 +0900
+I, [2025-04-23T03:35:58.428899 #45685]  INFO -- : [65f60231-2ba4-4f95-a24a-b4c8bce1f419] Processing by ProjectsController#index as HTML
+I, [2025-04-23T03:35:58.429881 #45685]  INFO -- : [65f60231-2ba4-4f95-a24a-b4c8bce1f419]   Rendered projects/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 222)
+I, [2025-04-23T03:35:58.429998 #45685]  INFO -- : [65f60231-2ba4-4f95-a24a-b4c8bce1f419]   Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 253)
+I, [2025-04-23T03:35:58.430200 #45685]  INFO -- : [65f60231-2ba4-4f95-a24a-b4c8bce1f419] Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.4ms | Allocations: 462)
+F, [2025-04-23T03:35:58.431515 #45685] FATAL -- : [65f60231-2ba4-4f95-a24a-b4c8bce1f419]   
+[65f60231-2ba4-4f95-a24a-b4c8bce1f419] ActionView::Template::Error (SQLite3::SQLException: no such table: projects):
+[65f60231-2ba4-4f95-a24a-b4c8bce1f419]     1: <h1>Project list</h1>
+[65f60231-2ba4-4f95-a24a-b4c8bce1f419]     2: <ul>
+[65f60231-2ba4-4f95-a24a-b4c8bce1f419]     3:   <% @projects&.each { |p| %>
+[65f60231-2ba4-4f95-a24a-b4c8bce1f419]     4:     <li><% if (p.consent == nil || p.consent == "") || (p.consent2 == nil || p.consent == "") %>
+[65f60231-2ba4-4f95-a24a-b4c8bce1f419]     5:           <%= link_to p.name, intro_project_path(p) %>
+[65f60231-2ba4-4f95-a24a-b4c8bce1f419]     6:         <% else %>
+[65f60231-2ba4-4f95-a24a-b4c8bce1f419]   
+[65f60231-2ba4-4f95-a24a-b4c8bce1f419] app/views/projects/index.html.erb:3
+I, [2025-04-23T03:36:14.374829 #45685]  INFO -- : [a6ebe557-c90c-4d00-b486-ffae2a879d6e] Started GET "/" for 127.0.0.1 at 2025-04-23 03:36:14 +0900
+I, [2025-04-23T03:36:14.376013 #45685]  INFO -- : [a6ebe557-c90c-4d00-b486-ffae2a879d6e] Processing by ProjectsController#index as HTML
+I, [2025-04-23T03:36:14.377153 #45685]  INFO -- : [a6ebe557-c90c-4d00-b486-ffae2a879d6e]   Rendered projects/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 221)
+I, [2025-04-23T03:36:14.377232 #45685]  INFO -- : [a6ebe557-c90c-4d00-b486-ffae2a879d6e]   Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 252)
+I, [2025-04-23T03:36:14.377326 #45685]  INFO -- : [a6ebe557-c90c-4d00-b486-ffae2a879d6e] Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.3ms | Allocations: 460)
+F, [2025-04-23T03:36:14.378743 #45685] FATAL -- : [a6ebe557-c90c-4d00-b486-ffae2a879d6e]   
+[a6ebe557-c90c-4d00-b486-ffae2a879d6e] ActionView::Template::Error (SQLite3::SQLException: no such table: projects):
+[a6ebe557-c90c-4d00-b486-ffae2a879d6e]     1: <h1>Project list</h1>
+[a6ebe557-c90c-4d00-b486-ffae2a879d6e]     2: <ul>
+[a6ebe557-c90c-4d00-b486-ffae2a879d6e]     3:   <% @projects&.each { |p| %>
+[a6ebe557-c90c-4d00-b486-ffae2a879d6e]     4:     <li><% if (p.consent == nil || p.consent == "") || (p.consent2 == nil || p.consent == "") %>
+[a6ebe557-c90c-4d00-b486-ffae2a879d6e]     5:           <%= link_to p.name, intro_project_path(p) %>
+[a6ebe557-c90c-4d00-b486-ffae2a879d6e]     6:         <% else %>
+[a6ebe557-c90c-4d00-b486-ffae2a879d6e]   
+[a6ebe557-c90c-4d00-b486-ffae2a879d6e] app/views/projects/index.html.erb:3
