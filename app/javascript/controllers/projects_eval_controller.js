@@ -61,7 +61,11 @@ export default class extends Controller {
     const sliderContainer = $("#slider-container");
     sliderContainer.hide();
 
-    imgContainer.html(`<img src="${this.imagesValue[this.currentImageIndex].url}" class="img-fluid" style="width: 100%; max-width: 600px; height: 400px; object-fit: cover; border-radius: 8px;" />`);
+    imgContainer.html(`
+        <img src="${this.imagesValue[this.currentImageIndex].url}"
+             class="img-fluid"
+             style="width:80vw;max-width:600px;height:auto;object-fit:contain;" />
+    `);
 
     this.stopProgressBar();
 
