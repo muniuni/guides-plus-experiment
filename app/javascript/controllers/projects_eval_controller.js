@@ -200,6 +200,11 @@ export default class extends Controller {
   }
 
   finishEvaluation() {
+    const urls = this.imagesValue.map(img => img.url);
+    sessionStorage.setItem("URLs", JSON.stringify(urls));
+    sessionStorage.setItem("x_label", this.xAxisValue);
+    sessionStorage.setItem("y_label", this.yAxisValue);
+
     $("#slider-container").hide();
     $("#submit-container").fadeIn();
 
