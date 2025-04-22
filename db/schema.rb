@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_01_26_035736) do
+ActiveRecord::Schema[7.0].define(version: 2025_04_22_011134) do
   create_table "images", force: :cascade do |t|
     t.string "url"
     t.integer "project_id", null: false
@@ -29,6 +29,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_01_26_035736) do
     t.datetime "updated_at", null: false
     t.text "consent"
     t.text "consent2"
+    t.boolean "with_timer"
     t.index ["user_id"], name: "index_projects_on_user_id"
   end
 

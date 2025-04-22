@@ -26,6 +26,10 @@
       <td><%= f.label 'Y-axis' %></td>
       <td><%= f.text_field :y_axis, class: 'form-control' %></td>
     </tr>
+    <tr>
+      <td><%= f.label 'Timed evaluation screen'%></td>
+      <td><%= f.check_box :with_timer %></td>
+    </tr>
   </table>
 <%= f.submit 'Update', class: 'btn btn-primary' %>
 <% end %>

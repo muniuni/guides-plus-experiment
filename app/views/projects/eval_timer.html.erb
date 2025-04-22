@@ -1,0 +1,57 @@
+<h1>Emotional Evaluation</h1>
+
+<!-- Progress bar -->
+<div class="w-100 my-3">
+  <div class="progress" style="height: 10px;">
+    <div id="progress-bar" class="progress-bar bg-info" role="progressbar" style="width: 100%; transition: width 0.1s;"></div>
+  </div>
+</div>
+
+<%= form_with model: Score.new, method: :post do |f| %>
+  <div data-controller="projects-eval"
+       data-projects-eval-images-value="<%= @images.to_json(only: [:id, :url]) %>"
+       data-projects-eval-x-axis-value="<%= @project.x_axis %>"
+       data-projects-eval-y-axis-value="<%= @project.y_axis %>"
+       data-projects-eval-with-timer-value="<%= @project.with_timer? %>">
+
+    <div class="container mt-5 d-flex flex-column align-items-center">
+      <div id="image-container" class="mb-4 text-center"></div>
+
+      <div id="slider-container" style="display:none;" class="col-12 col-md-8 col-lg-6">
+        <div class="card p-3 shadow-sm">
+          <div class="row">
+            <div class="col-4 text-left my-2">- ←</div>
+            <div class="col-4 text-center my-2"><%= @project.x_axis %></div>
+            <div class="col-4 text-end my-2">→ +</div>
+          </div>
+          <div id="slider-x" class="slider mb-4"></div>
+
+          <div class="row">
+            <div class="col-4 text-left my-2">- ←</div>
+            <div class="col-4 text-center my-2"><%= @project.y_axis %></div>
+            <div class="col-4 text-end my-2">→ +</div>
+          </div>
+          <div id="slider-y" class="slider mb-4"></div>
+
+          <div class="text-end">
+            <button type="button" id="next-button" class="btn btn-primary">Next</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Hidden Fields for params -->
+    <% 6.times do |i| %>
+      <%= f.hidden_field "i#{i}", id: "i#{i}" %>
+      <%= f.hidden_field "x#{i}", id: "x#{i}" %>
+      <%= f.hidden_field "y#{i}", id: "y#{i}" %>
+    <% end %>
+
+    <div class="text-center mb-5" style="display:none;" id="submit-container">
+      <%= f.submit 'Submit', class: 'btn btn-primary' %>
+    </div>
+
+  </div>
+<% end %>

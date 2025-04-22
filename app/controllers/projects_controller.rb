@@ -14,6 +14,8 @@ class ProjectsController < ApplicationController
   def eval
     @project = Project.find(params[:id])
     @images = @project.images.sample(6)
+
+    render @project.with_timer? ? 'projects/eval_timer' : 'projects/eval'
   end
 
   def result
@@ -31,4 +33,5 @@ class ProjectsController < ApplicationController
     end
     render json: results
   end
+
 end
