@@ -3,8 +3,8 @@
 <%= form_with model: [:admin, @project], html: { data: { controller: 'toggle-form' } } do |f| %>
   <table class= 'table table-sm table-striped' >
     <tr>
-      <td class='col-1' ><%= f.label 'Name' %></td>
-      <td class='col-11' ><%= f.text_field :name, class: 'form-control' %></td>
+      <td class='col-2' ><%= f.label 'Name' %></td>
+      <td class='col-10' ><%= f.text_field :name, class: 'form-control' %></td>
     </tr>
     <tr>
       <td><%= f.label 'Desc' %></td>
@@ -27,7 +27,7 @@
       <td><%= f.text_field :y_axis, class: 'form-control' %></td>
     </tr>
     <tr>
-      <td><%= f.label 'Timed evaluation screen'%></td>
+      <td><%= f.label 'Timed evaluation'%></td>
       <td><%= f.check_box :with_timer,
                 data: {
                   action: 'toggle-form#toggle',

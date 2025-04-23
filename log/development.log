@@ -5873,3 +5873,109 @@ Processing by Admin::ProjectsController#edit as HTML
 Completed 200 OK in 49ms (Views: 38.0ms | ActiveRecord: 2.3ms | Allocations: 20911)
 
 
+Started GET "/admin/projects/6/edit" for 127.0.0.1 at 2025-04-23 10:20:53 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::ProjectsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/admin/projects_controller.rb:18:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/projects/edit.html.erb within layouts/application
+  [1m[36mImage Load (0.8ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."project_id" = ?[0m  [["project_id", 6]]
+  ↳ app/views/admin/projects/edit.html.erb:52
+  Rendered admin/projects/edit.html.erb within layouts/application (Duration: 35.3ms | Allocations: 12324)
+  Rendered layout layouts/application.html.erb (Duration: 270.4ms | Allocations: 96782)
+Completed 200 OK in 456ms (Views: 274.8ms | ActiveRecord: 8.1ms | Allocations: 133094)
+
+
+Started GET "/admin/projects/6/edit" for 127.0.0.1 at 2025-04-23 10:20:59 +0900
+Processing by Admin::ProjectsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/admin/projects_controller.rb:18:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/projects/edit.html.erb within layouts/application
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."project_id" = ?[0m  [["project_id", 6]]
+  ↳ app/views/admin/projects/edit.html.erb:52
+  Rendered admin/projects/edit.html.erb within layouts/application (Duration: 7.6ms | Allocations: 4273)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 9744)
+Completed 200 OK in 21ms (Views: 15.7ms | ActiveRecord: 0.4ms | Allocations: 12043)
+
+
+Started GET "/admin/projects/6/edit" for 127.0.0.1 at 2025-04-23 10:21:12 +0900
+Processing by Admin::ProjectsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/admin/projects_controller.rb:18:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/projects/edit.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."project_id" = ?[0m  [["project_id", 6]]
+  ↳ app/views/admin/projects/edit.html.erb:52
+  Rendered admin/projects/edit.html.erb within layouts/application (Duration: 8.1ms | Allocations: 5252)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 11254)
+Completed 200 OK in 26ms (Views: 20.7ms | ActiveRecord: 0.4ms | Allocations: 14447)
+
+
+Started GET "/admin/projects/6/edit" for 127.0.0.1 at 2025-04-23 10:21:26 +0900
+Processing by Admin::ProjectsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/admin/projects_controller.rb:18:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/projects/edit.html.erb within layouts/application
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."project_id" = ?[0m  [["project_id", 6]]
+  ↳ app/views/admin/projects/edit.html.erb:52
+  Rendered admin/projects/edit.html.erb within layouts/application (Duration: 11.2ms | Allocations: 5247)
+  Rendered layout layouts/application.html.erb (Duration: 21.8ms | Allocations: 11248)
+Completed 200 OK in 30ms (Views: 24.3ms | ActiveRecord: 0.5ms | Allocations: 14435)
+
+
+Started GET "/admin/projects/6/edit" for 127.0.0.1 at 2025-04-23 10:21:28 +0900
+Processing by Admin::ProjectsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/admin/projects_controller.rb:18:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/projects/edit.html.erb within layouts/application
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."project_id" = ?[0m  [["project_id", 6]]
+  ↳ app/views/admin/projects/edit.html.erb:52
+  Rendered admin/projects/edit.html.erb within layouts/application (Duration: 8.8ms | Allocations: 4273)
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 9743)
+Completed 200 OK in 25ms (Views: 20.0ms | ActiveRecord: 0.4ms | Allocations: 12014)
+
+
+Started GET "/admin/projects/6/edit" for 127.0.0.1 at 2025-04-23 10:22:49 +0900
+Processing by Admin::ProjectsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/admin/projects_controller.rb:18:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/projects/edit.html.erb within layouts/application
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."project_id" = ?[0m  [["project_id", 6]]
+  ↳ app/views/admin/projects/edit.html.erb:48
+  Rendered admin/projects/edit.html.erb within layouts/application (Duration: 8.0ms | Allocations: 5244)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 11247)
+Completed 200 OK in 26ms (Views: 20.1ms | ActiveRecord: 0.4ms | Allocations: 14443)
+
+
+Started GET "/admin/projects/6/edit" for 127.0.0.1 at 2025-04-23 10:23:15 +0900
+Processing by Admin::ProjectsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/admin/projects_controller.rb:18:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/projects/edit.html.erb within layouts/application
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."project_id" = ?[0m  [["project_id", 6]]
+  ↳ app/views/admin/projects/edit.html.erb:48
+  Rendered admin/projects/edit.html.erb within layouts/application (Duration: 8.9ms | Allocations: 5269)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 11270)
+Completed 200 OK in 28ms (Views: 22.5ms | ActiveRecord: 0.4ms | Allocations: 14439)
+
+
