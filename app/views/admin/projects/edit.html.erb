@@ -1,6 +1,6 @@
 <h1>Edit the project</h1>
 <div class="mb-3">
-<%= form_with model: [:admin, @project] do |f| %>
+<%= form_with model: [:admin, @project], html: { data: { controller: 'toggle-form' } } do |f| %>
   <table class= 'table table-sm table-striped' >
     <tr>
       <td class='col-1' ><%= f.label 'Name' %></td>
@@ -28,10 +28,15 @@
     </tr>
     <tr>
       <td><%= f.label 'Timed evaluation screen'%></td>
-      <td><%= f.check_box :with_timer %></td>
+      <td><%= f.check_box :with_timer,
+                data: {
+                  action: 'toggle-form#toggle',
+                  toggle_form_target: 'checkbox'
+                }%>
+      </td>
     </tr>
-    <tr>
-      <td><%= f.label 'Duration' %></td>
+    <tr data-toggle-form-target="durationRow">
+      <td><%= f.label 'Duration(ms)' %></td>
       <td><%= f.text_field :duration, class: 'form-control' %></td>
     </tr>
   </table>
