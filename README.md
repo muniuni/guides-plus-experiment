@@ -1,4 +1,11 @@
-# GUIDES: The General and Universal Image Data Evaluation System
+# GUIDES+: The General and Universal Image Data Evaluation System
+
+## GUIDES+ (Experiment)
+GUIDES+は、感性評価システムGUIDESにTimed Evaluationモードを追加したカスタム版です。
+
+プロジェクト編集画面から"Timed Evaluation"にチェックを入れると感性評価のプロセスが変化します。
+
+Durationを設定することで画像の表示時間を調整できます。
 
 ## Installation
 Prepare ruby 3.2.2, rails 7.0.8, and bundler 2.4.15 with SQLite3 database to implement this system.
