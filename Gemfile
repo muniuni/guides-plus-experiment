@@ -71,6 +71,10 @@ group :test do
   gem "webdrivers"
 end
 
+group :production do
+  gem 'pg', '~> 1.3.5'
+end
+
 # Bootstrap 5
 gem "bootstrap", "~> 5.3.0"
 

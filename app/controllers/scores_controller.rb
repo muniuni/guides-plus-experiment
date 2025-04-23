@@ -9,7 +9,7 @@ class ScoresController < ApplicationController
       image.scores << sy
       proj = image.project
     end
-      
+
     redirect_to result_project_path(proj)
   end
 
