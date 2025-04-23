@@ -41,6 +41,6 @@ class Admin::ProjectsController < Admin::ApplicationController
 
   private
   def project_params
-    params.require(:project).permit(:name, :description, :consent, :consent2, :x_axis, :y_axis, :with_timer)
+    params.require(:project).permit(:name, :description, :consent, :consent2, :x_axis, :y_axis, :with_timer, :duration)
   end
 end

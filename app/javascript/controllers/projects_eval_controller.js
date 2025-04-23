@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static values = { images: Array, xAxis: String, yAxis: String, withTimer: Boolean }
+  static values = { images: Array, xAxis: String, yAxis: String, withTimer: Boolean, duration: Number }
 
   connect() {
     this.withTimerValue ? this.startTimedFlow() : this.startClassicFlow()
@@ -84,11 +84,11 @@ export default class extends Controller {
       sliderContainer.fadeIn(() => {
         this.setupSliders();
       });
-    }, 5000);
+    }, this.durationValue);
   }
 
   startProgressBar() {
-    const totalDuration = 5000;
+    const totalDuration = this.durationValue;
     const updateInterval = 100;
     let elapsed = 0;
 

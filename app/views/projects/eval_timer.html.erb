@@ -11,7 +11,8 @@
        data-projects-eval-images-value="<%= @images.to_json(only: [:id, :url]) %>"
        data-projects-eval-x-axis-value="<%= @project.x_axis %>"
        data-projects-eval-y-axis-value="<%= @project.y_axis %>"
-       data-projects-eval-with-timer-value="<%= @project.with_timer? %>">
+       data-projects-eval-with-timer-value="<%= @project.with_timer? %>"
+       data-projects-eval-duration-value="<%= @project.duration %>">
 
     <div class="container-fluid mt-5 d-flex flex-column align-items-center">
       <div id="image-container" class="mb-4 text-center"></div>
