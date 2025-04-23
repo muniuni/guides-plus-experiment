@@ -212,6 +212,10 @@ export default class extends Controller {
       $(`#i${idx}`).val(result.id);
       $(`#x${idx}`).val(result.x);
       $(`#y${idx}`).val(result.y);
+
+      sessionStorage.setItem(`i${idx}`, result.id);
+      sessionStorage.setItem(`x${idx}`, result.x);
+      sessionStorage.setItem(`y${idx}`, result.y);
     });
   }
 }
