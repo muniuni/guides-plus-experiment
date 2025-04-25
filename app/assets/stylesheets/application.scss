@@ -29,9 +29,27 @@
 }
 
 img {
-  --webkit-touch-callout:none;
-  -webkit-user-select:none;
-  -moz-touch-callout:none;
-  -moz-user-select:none;
-  user-select:none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-touch-callout: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.img-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.no-save {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.img-guard {
+  position: absolute; inset: 0;
+  background: transparent;
+  z-index: 2;
 }

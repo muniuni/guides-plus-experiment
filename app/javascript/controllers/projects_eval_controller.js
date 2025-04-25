@@ -63,7 +63,7 @@ export default class extends Controller {
 
     imgContainer.html(`
         <img src="${this.imagesValue[this.currentImageIndex].url}"
-             class="img-fluid"
+             class="img-fluid no-save"
              style="width:80vw;max-width:600px;height:auto;object-fit:contain;"
              oncontextmenu="return false;"
              onselectstart="return false;"

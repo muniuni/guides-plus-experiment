@@ -4,8 +4,11 @@
   <div class="row mb-3" data-controller="projects-eval">
     <% @images&.each_with_index {|image,i| %>
       <div class="col-12 col-md-6 col-xl-4 mb-3">
-        <img src="<%= image.url %>" class="col-12" id="image-<%= i %>" oncontextmenu="return false;" onselectstart="return false;" onmousedown="return false;" />
-        <%= f.hidden_field "i#{i}", value: image.id, id: "img-#{i}" %>
+        <div class="img-container">
+          <div class="img-guard"></div>
+          <img src="<%= image.url %>" class="no-save" id="image-<%= i %>" oncontextmenu="return false;" onselectstart="return false;" onmousedown="return false;" />
+          <%= f.hidden_field "i#{i}", value: image.id, id: "img-#{i}" %>
+        </div>
         <div class="row">
           <div class="col-4 text-left my-2">- ←</div>
           <div class="col-4 text-center my-2" id="x_axis-<%= i %>">
