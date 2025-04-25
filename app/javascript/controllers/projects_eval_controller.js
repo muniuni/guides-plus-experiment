@@ -64,7 +64,10 @@ export default class extends Controller {
     imgContainer.html(`
         <img src="${this.imagesValue[this.currentImageIndex].url}"
              class="img-fluid"
-             style="width:80vw;max-width:600px;height:auto;object-fit:contain;" />
+             style="width:80vw;max-width:600px;height:auto;object-fit:contain;"
+             oncontextmenu="return false;"
+             onselectstart="return false;"
+             onmousedown="return false;" />
     `);
 
     this.stopProgressBar();
